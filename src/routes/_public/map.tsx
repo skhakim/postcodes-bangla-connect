@@ -1,10 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Layers, MapPin } from "lucide-react";
 import { BangladeshMap } from "@/components/ipms/BangladeshMap";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { postcodes } from "@/data/postcodes";
 
 export const Route = createFileRoute("/_public/map")({
@@ -12,17 +13,26 @@ export const Route = createFileRoute("/_public/map")({
   head: () => ({ meta: [{ title: "Interactive Postcode Map — IPMS" }] }),
 });
 
+const DIVISIONS = ["Dhaka", "Chattogram", "Sylhet", "Khulna", "Rajshahi", "Barishal", "Rangpur", "Mymensingh"];
+
 function MapPage() {
   const [selected, setSelected] = useState<string>("Dhaka");
+  const [district, setDistrict] = useState<string>("");
   const [layer, setLayer] = useState<"standard" | "satellite" | "boundary">("standard");
   const inDivision = postcodes.filter((p) => p.division === selected);
+  const districts = useMemo(
+    () => Array.from(new Set(postcodes.filter((p) => p.division === selected).map((p) => p.district))).sort(),
+    [selected]
+  );
 
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <h1 className="text-3xl font-bold">Interactive Map</h1>
-          <p className="mt-1 text-muted-foreground">Click a division to see postcodes and adjacent zones.</p>
+          <p className="mt-1 text-muted-foreground">
+            Live OpenStreetMap tiles with real district boundaries. Click any district to view postcodes.
+          </p>
         </div>
         <Tabs value={layer} onValueChange={(v) => setLayer(v as typeof layer)}>
           <TabsList>
@@ -33,11 +43,36 @@ function MapPage() {
         </Tabs>
       </div>
 
+      <div className="mb-4 flex flex-wrap gap-3">
+        <div className="min-w-[180px]">
+          <Select value={selected} onValueChange={(v) => { setSelected(v); setDistrict(""); }}>
+            <SelectTrigger><SelectValue placeholder="Division" /></SelectTrigger>
+            <SelectContent>
+              {DIVISIONS.map((d) => <SelectItem key={d} value={d}>{d}</SelectItem>)}
+            </SelectContent>
+          </Select>
+        </div>
+        <div className="min-w-[180px]">
+          <Select value={district || "__all"} onValueChange={(v) => setDistrict(v === "__all" ? "" : v)}>
+            <SelectTrigger><SelectValue placeholder="District" /></SelectTrigger>
+            <SelectContent>
+              <SelectItem value="__all">All districts</SelectItem>
+              {districts.map((d) => <SelectItem key={d} value={d}>{d}</SelectItem>)}
+            </SelectContent>
+          </Select>
+        </div>
+      </div>
+
       <div className="grid gap-6 lg:grid-cols-3">
         <Card className="lg:col-span-2">
           <CardContent className="p-2 sm:p-4">
             <div className="rounded-lg border bg-muted/30 overflow-hidden">
-              <BangladeshMap layer={layer} highlight={selected} onSelect={setSelected} className="aspect-[4/4] w-full" />
+              <BangladeshMap
+                layer={layer}
+                highlight={selected}
+                onSelect={(div, dist) => { setSelected(div); if (dist) setDistrict(dist); }}
+                className="aspect-square w-full"
+              />
             </div>
             <div className="mt-3 flex flex-wrap gap-2 text-xs">
               <Legend color="var(--chart-1)" label="Dhaka" />
