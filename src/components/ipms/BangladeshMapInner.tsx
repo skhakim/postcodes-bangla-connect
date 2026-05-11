@@ -51,13 +51,11 @@ const TILE_CONFIG = {
   },
 };
 
-export function BangladeshMap({ onSelect, highlight, layer = "standard", className }: Props) {
-  const [mounted, setMounted] = useState(false);
+export default function BangladeshMapInner({ onSelect, highlight, layer = "standard", className }: Props) {
   const [data, setData] = useState<FeatureCollection | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    setMounted(true);
     let aborted = false;
     fetch(DISTRICTS_URL)
       .then((r) => r.json())
@@ -69,16 +67,6 @@ export function BangladeshMap({ onSelect, highlight, layer = "standard", classNa
       aborted = true;
     };
   }, []);
-
-  if (!mounted) {
-    return (
-      <div className={className}>
-        <div className="flex h-full w-full items-center justify-center bg-muted/40 text-sm text-muted-foreground">
-          Loading map…
-        </div>
-      </div>
-    );
-  }
 
   const tile = TILE_CONFIG[layer];
 
