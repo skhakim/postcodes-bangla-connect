@@ -18,7 +18,7 @@ export function PostcodeResultCard({ p }: { p: Postcode }) {
               </Badge>
             </div>
             <div className="mt-1 text-base font-semibold">{p.area}</div>
-            <div className="font-bangla text-sm text-muted-foreground">{p.areaBn}</div>
+            {p.areaBn && <div className="font-bangla text-sm text-muted-foreground">{p.areaBn}</div>}
             <div className="mt-2 text-xs text-muted-foreground">
               {p.postOffice} · {p.upazila}, {p.district}, {p.division}
             </div>

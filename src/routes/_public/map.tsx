@@ -6,28 +6,37 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { postcodes } from "@/data/postcodes";
+import { postcodes, divisions } from "@/data/postcodes";
 
 export const Route = createFileRoute("/_public/map")({
   component: MapPage,
   head: () => ({ meta: [{ title: "Interactive Postcode Map — IPMS" }] }),
 });
 
-const DIVISIONS = ["Dhaka", "Chattogram", "Sylhet", "Khulna", "Rajshahi", "Barishal", "Rangpur", "Mymensingh"];
+
 
 function MapPage() {
   const [selected, setSelected] = useState<string>("Dhaka");
   const [district, setDistrict] = useState<string>("");
+  const [upazila, setUpazila] = useState<string>("");
   const [postcodeId, setPostcodeId] = useState<string>("");
   const [layer, setLayer] = useState<"standard" | "satellite" | "boundary">("standard");
   const inDivision = postcodes.filter((p) => p.division === selected);
   const districts = useMemo(
-    () => Array.from(new Set(postcodes.filter((p) => p.division === selected).map((p) => p.district))).sort(),
+    () => Object.keys(divisions[selected] ?? {}).sort(),
     [selected]
   );
+  const upazilas = useMemo(
+    () => (district ? (divisions[selected]?.[district] ?? []) : []),
+    [selected, district]
+  );
   const inDistrict = useMemo(
-    () => (district ? inDivision.filter((p) => p.district === district) : inDivision),
-    [inDivision, district]
+    () => {
+      let data = district ? inDivision.filter((p) => p.district === district) : inDivision;
+      if (upazila) data = data.filter((p) => p.upazila === upazila);
+      return data;
+    },
+    [inDivision, district, upazila]
   );
   const activePostcode = useMemo(
     () => postcodes.find((p) => p.id === postcodeId) ?? null,
@@ -55,21 +64,30 @@ function MapPage() {
         </Tabs>
       </div>
 
-      <div className="mb-4 flex flex-wrap gap-3">
+      <div className="relative z-[10] mb-4 flex flex-wrap gap-3">
         <div className="min-w-[180px]">
-          <Select value={selected} onValueChange={(v) => { setSelected(v); setDistrict(""); setPostcodeId(""); }}>
+          <Select value={selected} onValueChange={(v) => { setSelected(v); setDistrict(""); setUpazila(""); setPostcodeId(""); }}>
             <SelectTrigger><SelectValue placeholder="Division" /></SelectTrigger>
             <SelectContent>
-              {DIVISIONS.map((d) => <SelectItem key={d} value={d}>{d}</SelectItem>)}
+              {Object.keys(divisions).map((d) => <SelectItem key={d} value={d}>{d}</SelectItem>)}
             </SelectContent>
           </Select>
         </div>
         <div className="min-w-[180px]">
-          <Select value={district || "__all"} onValueChange={(v) => { setDistrict(v === "__all" ? "" : v); setPostcodeId(""); }}>
+          <Select value={district || "__all"} onValueChange={(v) => { setDistrict(v === "__all" ? "" : v); setUpazila(""); setPostcodeId(""); }}>
             <SelectTrigger><SelectValue placeholder="District" /></SelectTrigger>
             <SelectContent>
               <SelectItem value="__all">All districts</SelectItem>
               {districts.map((d) => <SelectItem key={d} value={d}>{d}</SelectItem>)}
+            </SelectContent>
+          </Select>
+        </div>
+        <div className="min-w-[200px]">
+          <Select value={upazila || "__all"} onValueChange={(v) => { setUpazila(v === "__all" ? "" : v); setPostcodeId(""); }} disabled={!district}>
+            <SelectTrigger><SelectValue placeholder="Upazila / Thana" /></SelectTrigger>
+            <SelectContent>
+              <SelectItem value="__all">All upazilas</SelectItem>
+              {upazilas.map((u) => <SelectItem key={u} value={u}>{u}</SelectItem>)}
             </SelectContent>
           </Select>
         </div>
@@ -87,7 +105,7 @@ function MapPage() {
       </div>
 
       <div className="grid gap-6 lg:grid-cols-3">
-        <Card className="lg:col-span-2">
+        <Card className="isolate lg:col-span-2">
           <CardContent className="p-2 sm:p-4">
             <div className="rounded-lg border bg-muted/30 overflow-hidden">
               <BangladeshMap

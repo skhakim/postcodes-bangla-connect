@@ -10,7 +10,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { postcodes as initialData, type Postcode } from "@/data/postcodes";
+import { postcodes as initialData, divisions, type Postcode } from "@/data/postcodes";
 import { useAuth, can } from "@/lib/auth";
 
 export const Route = createFileRoute("/admin/records")({ component: RecordsPage });
@@ -146,9 +146,24 @@ function RecordsPage() {
               <Field label="Area (English)"><Input value={editing.area} onChange={(e) => setEditing({ ...editing, area: e.target.value })} /></Field>
               <Field label="Area (Bangla)"><Input className="font-bangla" value={editing.areaBn} onChange={(e) => setEditing({ ...editing, areaBn: e.target.value })} /></Field>
               <Field label="Post Office"><Input value={editing.postOffice} onChange={(e) => setEditing({ ...editing, postOffice: e.target.value })} /></Field>
-              <Field label="Upazila"><Input value={editing.upazila} onChange={(e) => setEditing({ ...editing, upazila: e.target.value })} /></Field>
-              <Field label="District"><Input value={editing.district} onChange={(e) => setEditing({ ...editing, district: e.target.value })} /></Field>
-              <Field label="Division"><Input value={editing.division} onChange={(e) => setEditing({ ...editing, division: e.target.value })} /></Field>
+              <Field label="Division">
+                <Select value={editing.division} onValueChange={(v) => setEditing({ ...editing, division: v, district: "", upazila: "" })}>
+                  <SelectTrigger><SelectValue placeholder="Division" /></SelectTrigger>
+                  <SelectContent>{Object.keys(divisions).map((d) => <SelectItem key={d} value={d}>{d}</SelectItem>)}</SelectContent>
+                </Select>
+              </Field>
+              <Field label="District">
+                <Select value={editing.district} onValueChange={(v) => setEditing({ ...editing, district: v, upazila: "" })} disabled={!editing.division}>
+                  <SelectTrigger><SelectValue placeholder="District" /></SelectTrigger>
+                  <SelectContent>{Object.keys(divisions[editing.division] ?? {}).map((d) => <SelectItem key={d} value={d}>{d}</SelectItem>)}</SelectContent>
+                </Select>
+              </Field>
+              <Field label="Upazila / Thana">
+                <Select value={editing.upazila} onValueChange={(v) => setEditing({ ...editing, upazila: v })} disabled={!editing.district}>
+                  <SelectTrigger><SelectValue placeholder="Upazila / Thana" /></SelectTrigger>
+                  <SelectContent>{(divisions[editing.division]?.[editing.district] ?? []).map((u) => <SelectItem key={u} value={u}>{u}</SelectItem>)}</SelectContent>
+                </Select>
+              </Field>
               <Field label="Latitude"><Input type="number" value={editing.lat} onChange={(e) => setEditing({ ...editing, lat: +e.target.value })} /></Field>
               <Field label="Longitude"><Input type="number" value={editing.lng} onChange={(e) => setEditing({ ...editing, lng: +e.target.value })} /></Field>
               <div className="sm:col-span-2">

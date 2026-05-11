@@ -65,10 +65,6 @@ function Home() {
             <div className="rounded-xl border bg-card p-3 shadow-xl">
               <BangladeshMap className="aspect-square w-full" />
             </div>
-            <div className="absolute -bottom-4 -left-4 hidden rounded-lg border bg-card px-4 py-3 shadow-lg sm:block">
-              <div className="text-xs text-muted-foreground">Pilot district</div>
-              <div className="text-sm font-semibold">Dhaka — 1205, Dhanmondi</div>
-            </div>
           </div>
         </div>
       </section>
