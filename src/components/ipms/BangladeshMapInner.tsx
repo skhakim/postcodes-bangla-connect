@@ -1,11 +1,9 @@
-import { useEffect, useState } from "react";
-import { MapContainer, TileLayer, GeoJSON, LayersControl } from "react-leaflet";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { MapContainer, TileLayer, GeoJSON, CircleMarker, Tooltip, useMap } from "react-leaflet";
 import type { Feature, FeatureCollection, Geometry } from "geojson";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 
-// Real Bangladesh district polygons from OpenStreetMap-derived dataset
-// (nuhil/bangladesh-geocode, ADM1/ADM2 boundaries). Loaded at runtime.
 const DISTRICTS_URL =
   "https://raw.githubusercontent.com/nuhil/bangladesh-geocode/master/geojson/districts.geojson";
 
@@ -29,9 +27,27 @@ function resolveColor(v: string) {
   return getComputedStyle(document.documentElement).getPropertyValue(name).trim() || "#3b82f6";
 }
 
+// Normalize district names so e.g. "Chattogram" matches "Chittagong" between datasets
+function norm(s: string) {
+  return s.toLowerCase().replace(/[^a-z]/g, "");
+}
+const DISTRICT_ALIASES: Record<string, string> = {
+  chittagong: "chattogram",
+  barisal: "barishal",
+  jessore: "jashore",
+  bogra: "bogura",
+  comilla: "cumilla",
+};
+function nd(s: string) {
+  const n = norm(s);
+  return DISTRICT_ALIASES[n] ?? n;
+}
+
 type Props = {
   onSelect?: (division: string, district?: string) => void;
   highlight?: string; // division name
+  highlightDistrict?: string;
+  marker?: { lat: number; lng: number; label?: string } | null;
   layer?: "standard" | "satellite" | "boundary";
   className?: string;
 };
@@ -51,9 +67,27 @@ const TILE_CONFIG = {
   },
 };
 
-export default function BangladeshMapInner({ onSelect, highlight, layer = "standard", className }: Props) {
+function FitToLayer({ trigger }: { trigger: L.LatLngBounds | null }) {
+  const map = useMap();
+  useEffect(() => {
+    if (trigger && trigger.isValid()) {
+      map.flyToBounds(trigger, { padding: [20, 20], duration: 0.6, maxZoom: 11 });
+    }
+  }, [trigger, map]);
+  return null;
+}
+
+export default function BangladeshMapInner({
+  onSelect,
+  highlight,
+  highlightDistrict,
+  marker,
+  layer = "standard",
+  className,
+}: Props) {
   const [data, setData] = useState<FeatureCollection | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const geoRef = useRef<L.GeoJSON | null>(null);
 
   useEffect(() => {
     let aborted = false;
@@ -70,16 +104,59 @@ export default function BangladeshMapInner({ onSelect, highlight, layer = "stand
 
   const tile = TILE_CONFIG[layer];
 
+  const focusBounds = useMemo<L.LatLngBounds | null>(() => {
+    if (!data) return null;
+    if (marker) {
+      return L.latLngBounds([
+        [marker.lat - 0.15, marker.lng - 0.15],
+        [marker.lat + 0.15, marker.lng + 0.15],
+      ]);
+    }
+    if (!highlight && !highlightDistrict) return null;
+    const matches = data.features.filter((f) => {
+      const div = (f.properties as any)?.ADM1_EN ?? "";
+      const dist = (f.properties as any)?.ADM2_EN ?? "";
+      if (highlightDistrict) return nd(dist) === nd(highlightDistrict);
+      return nd(div) === nd(highlight ?? "");
+    });
+    if (!matches.length) return null;
+    const layer = L.geoJSON({ type: "FeatureCollection", features: matches } as FeatureCollection);
+    return layer.getBounds();
+  }, [data, highlight, highlightDistrict, marker]);
+
   const styleFeature = (feature?: Feature<Geometry, { ADM1_EN?: string; ADM2_EN?: string }>) => {
     const division = feature?.properties?.ADM1_EN ?? "";
+    const district = feature?.properties?.ADM2_EN ?? "";
     const color = resolveColor(DIVISION_COLORS[division] ?? "#3b82f6");
-    const isHighlight = highlight && division === highlight;
+
+    const districtMatch = highlightDistrict && nd(district) === nd(highlightDistrict);
+    const divisionMatch = highlight && nd(division) === nd(highlight);
+
+    // Dimming logic
+    let dim = false;
+    if (highlightDistrict) {
+      dim = !districtMatch;
+    } else if (highlight) {
+      dim = !divisionMatch;
+    }
+
+    if (dim) {
+      return {
+        color: "#9ca3af",
+        weight: 0.3,
+        opacity: 0.4,
+        fillColor: "#cbd5e1",
+        fillOpacity: 0.08,
+      };
+    }
+
+    const isFocus = districtMatch || (!highlightDistrict && divisionMatch);
     return {
       color: layer === "satellite" ? "#ffffff" : "#1f2937",
-      weight: isHighlight ? 2 : 0.6,
-      opacity: 0.9,
+      weight: districtMatch ? 2.5 : isFocus ? 1.5 : 0.6,
+      opacity: 0.95,
       fillColor: color,
-      fillOpacity: layer === "boundary" ? 0.15 : isHighlight ? 0.7 : 0.45,
+      fillOpacity: layer === "boundary" ? 0.2 : districtMatch ? 0.75 : isFocus ? 0.55 : 0.4,
     };
   };
 
@@ -110,15 +187,11 @@ export default function BangladeshMapInner({ onSelect, highlight, layer = "stand
         center={[23.685, 90.3563]}
         zoom={7}
         minZoom={6}
-        maxZoom={12}
+        maxZoom={13}
         scrollWheelZoom={false}
         style={{ height: "100%", width: "100%", background: "transparent" }}
       >
-        <LayersControl position="topright">
-          <LayersControl.BaseLayer checked name={layer === "standard" ? "Standard" : layer === "satellite" ? "Satellite" : "Boundary"}>
-            <TileLayer url={tile.url} attribution={tile.attribution} />
-          </LayersControl.BaseLayer>
-        </LayersControl>
+        <TileLayer url={tile.url} attribution={tile.attribution} />
         {error && (
           <div className="absolute inset-0 flex items-center justify-center bg-background/80 text-sm text-destructive">
             Failed to load boundaries: {error}
@@ -126,12 +199,39 @@ export default function BangladeshMapInner({ onSelect, highlight, layer = "stand
         )}
         {data && (
           <GeoJSON
-            key={`${layer}-${highlight}`}
+            ref={geoRef as any}
+            key={`${layer}-${highlight}-${highlightDistrict}`}
             data={data}
             style={styleFeature as L.StyleFunction}
             onEachFeature={onEach}
           />
         )}
+        {marker && (
+          <>
+            <CircleMarker
+              center={[marker.lat, marker.lng]}
+              radius={18}
+              pathOptions={{ color: resolveColor("var(--primary)"), weight: 2, fillOpacity: 0.15 }}
+            />
+            <CircleMarker
+              center={[marker.lat, marker.lng]}
+              radius={6}
+              pathOptions={{
+                color: "#ffffff",
+                weight: 2,
+                fillColor: resolveColor("var(--primary)"),
+                fillOpacity: 1,
+              }}
+            >
+              {marker.label && (
+                <Tooltip permanent direction="top" offset={[0, -8]}>
+                  {marker.label}
+                </Tooltip>
+              )}
+            </CircleMarker>
+          </>
+        )}
+        <FitToLayer trigger={focusBounds} />
       </MapContainer>
     </div>
   );
