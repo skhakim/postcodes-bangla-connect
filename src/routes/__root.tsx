@@ -64,6 +64,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:description", content: "Official postcode lookup, GPS detection, interactive map and admin tools by Bangladesh Post Office." },
       { name: "twitter:card", content: "summary" },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/687a42dc-aafa-4a8f-b81b-ecbee56a5489/id-preview-f4d4dffd--e6414f47-e4d7-4c5c-af2d-3bb1d0a05d90.lovable.app-1778484179809.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/687a42dc-aafa-4a8f-b81b-ecbee56a5489/id-preview-f4d4dffd--e6414f47-e4d7-4c5c-af2d-3bb1d0a05d90.lovable.app-1778484179809.png" },
     ],
     links: [{ rel: "stylesheet", href: appCss }],
   }),
