@@ -5,6 +5,8 @@ const Inner = lazy(() => import("./BangladeshMapInner"));
 export type BangladeshMapProps = {
   onSelect?: (division: string, district?: string) => void;
   highlight?: string;
+  highlightDistrict?: string;
+  marker?: { lat: number; lng: number; label?: string } | null;
   layer?: "standard" | "satellite" | "boundary";
   className?: string;
 };

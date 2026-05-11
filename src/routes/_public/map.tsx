@@ -18,12 +18,24 @@ const DIVISIONS = ["Dhaka", "Chattogram", "Sylhet", "Khulna", "Rajshahi", "Baris
 function MapPage() {
   const [selected, setSelected] = useState<string>("Dhaka");
   const [district, setDistrict] = useState<string>("");
+  const [postcodeId, setPostcodeId] = useState<string>("");
   const [layer, setLayer] = useState<"standard" | "satellite" | "boundary">("standard");
   const inDivision = postcodes.filter((p) => p.division === selected);
   const districts = useMemo(
     () => Array.from(new Set(postcodes.filter((p) => p.division === selected).map((p) => p.district))).sort(),
     [selected]
   );
+  const inDistrict = useMemo(
+    () => (district ? inDivision.filter((p) => p.district === district) : inDivision),
+    [inDivision, district]
+  );
+  const activePostcode = useMemo(
+    () => postcodes.find((p) => p.id === postcodeId) ?? null,
+    [postcodeId]
+  );
+  const marker = activePostcode
+    ? { lat: activePostcode.lat, lng: activePostcode.lng, label: `${activePostcode.postcode} · ${activePostcode.area}` }
+    : null;
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -45,7 +57,7 @@ function MapPage() {
 
       <div className="mb-4 flex flex-wrap gap-3">
         <div className="min-w-[180px]">
-          <Select value={selected} onValueChange={(v) => { setSelected(v); setDistrict(""); }}>
+          <Select value={selected} onValueChange={(v) => { setSelected(v); setDistrict(""); setPostcodeId(""); }}>
             <SelectTrigger><SelectValue placeholder="Division" /></SelectTrigger>
             <SelectContent>
               {DIVISIONS.map((d) => <SelectItem key={d} value={d}>{d}</SelectItem>)}
@@ -53,11 +65,22 @@ function MapPage() {
           </Select>
         </div>
         <div className="min-w-[180px]">
-          <Select value={district || "__all"} onValueChange={(v) => setDistrict(v === "__all" ? "" : v)}>
+          <Select value={district || "__all"} onValueChange={(v) => { setDistrict(v === "__all" ? "" : v); setPostcodeId(""); }}>
             <SelectTrigger><SelectValue placeholder="District" /></SelectTrigger>
             <SelectContent>
               <SelectItem value="__all">All districts</SelectItem>
               {districts.map((d) => <SelectItem key={d} value={d}>{d}</SelectItem>)}
+            </SelectContent>
+          </Select>
+        </div>
+        <div className="min-w-[200px]">
+          <Select value={postcodeId || "__none"} onValueChange={(v) => setPostcodeId(v === "__none" ? "" : v)}>
+            <SelectTrigger><SelectValue placeholder="Postcode" /></SelectTrigger>
+            <SelectContent>
+              <SelectItem value="__none">No postcode</SelectItem>
+              {inDistrict.map((p) => (
+                <SelectItem key={p.id} value={p.id}>{p.postcode} — {p.area}</SelectItem>
+              ))}
             </SelectContent>
           </Select>
         </div>
@@ -70,7 +93,9 @@ function MapPage() {
               <BangladeshMap
                 layer={layer}
                 highlight={selected}
-                onSelect={(div, dist) => { setSelected(div); if (dist) setDistrict(dist); }}
+                highlightDistrict={district}
+                marker={marker}
+                onSelect={(div, dist) => { setSelected(div); setDistrict(dist ?? ""); setPostcodeId(""); }}
                 className="aspect-square w-full"
               />
             </div>
@@ -91,13 +116,23 @@ function MapPage() {
             </CardHeader>
             <CardContent className="space-y-2">
               {inDivision.length === 0 && <p className="text-sm text-muted-foreground">No records.</p>}
-              {inDivision.slice(0, 6).map((p) => (
-                <div key={p.id} className="flex items-center justify-between rounded-md border p-2 text-sm">
+              {inDistrict.slice(0, 8).map((p) => (
+                <div
+                  key={p.id}
+                  className={`flex items-center justify-between rounded-md border p-2 text-sm transition ${postcodeId === p.id ? "border-primary bg-primary/5" : ""}`}
+                >
                   <div>
                     <div className="font-semibold text-primary">{p.postcode}</div>
                     <div className="text-xs text-muted-foreground">{p.area} · {p.district}</div>
                   </div>
-                  <Button size="sm" variant="ghost" className="gap-1"><MapPin className="h-3 w-3" /> Pin</Button>
+                  <Button
+                    size="sm"
+                    variant={postcodeId === p.id ? "default" : "ghost"}
+                    className="gap-1"
+                    onClick={() => setPostcodeId(p.id)}
+                  >
+                    <MapPin className="h-3 w-3" /> Pin
+                  </Button>
                 </div>
               ))}
             </CardContent>
