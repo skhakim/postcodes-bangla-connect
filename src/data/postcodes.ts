@@ -34,7 +34,7 @@ const _raw = rawHierarchy as unknown as RawDivision[];
  * given sensible defaults — they can be enriched later without changing this logic.
  */
 export const postcodes: Postcode[] = _raw.flatMap((divObj, di) => {
-  const division = divObj.division === "Chittagong" ? "Chattogram" : divObj.division;
+  const division = divObj.division;
 
   return divObj.districts.flatMap((distObj, disti) =>
     distObj.police_stations.flatMap((ps, psi) =>
@@ -63,8 +63,7 @@ export const postcodes: Postcode[] = _raw.flatMap((divObj, di) => {
  */
 export const divisions: Record<string, Record<string, string[]>> = Object.fromEntries(
   _raw.map((divObj) => {
-    // Normalise legacy "Chittagong" spelling present in the source data
-    const divName = divObj.division === "Chittagong" ? "Chattogram" : divObj.division;
+    const divName = divObj.division;
 
     const districtMap = Object.fromEntries(
       divObj.districts.map((distObj) => [
@@ -101,7 +100,7 @@ const _sortedDistrictCache = Object.fromEntries(
  */
 const _sortedPostcodeCache = new Map<string, Postcode[]>();
 _raw.forEach((divObj, di) => {
-  const division = divObj.division === "Chittagong" ? "Chattogram" : divObj.division;
+  const division = divObj.division;
   divObj.districts.forEach((distObj) => {
     const key = `${division}|${distObj.district}`;
     const districtPostcodes = postcodes.filter(

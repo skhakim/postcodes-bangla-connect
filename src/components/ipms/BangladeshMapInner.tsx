@@ -25,164 +25,14 @@ const DIVISION_COLORS: Record<string, string> = {
   Mymensingh: "var(--chart-5)",
 };
 
-const NAME_MAPPING: Record<string, string> = {
-  // Divisions & Districts
-  chittagong: "chattogram",
-  barisal: "barishal",
-  hobigonj: "habiganj",
-  hobiganj: "habiganj",
-  nogaon: "naogaon",
-  chapai: "chapainababganj",
-  khagrachari: "khagrachhari",
-  jessore: "jashore",
-  narshingdi: "narsingdi",
-  comilla: "cumilla",
-  bogra: "bogura",
-  jhalakathi: "jhalokati",
-
-  // Upazilas - Dhaka Division
-  charbadrashan: "charbhadrasan",
-  madukhali: "madhukhali",
-  maksudpur: "muksudpur",
-  tarial: "tarail",
-  hossenpur: "hossainpur",
-  mithamoin: "mithamain",
-  ostagram: "austagram",
-  hariampur: "harirampur",
-  gheor: "ghior",
-  shibaloy: "shibalay",
-  doulatpur: "daulatpur",
-  gajaria: "gazaria",
-  tangibari: "tongibari",
-  lohajong: "louhajang",
-  srinagar: "sreenagar",
-  narshingdisadar: "narsingdisadar",
-  monohordi: "manohardi",
-  raypura: "raipura",
-  jajira: "zajira",
-  badarganj: "bhedarganj",
-  bhuapur: "bhuanpur",
-  dhonbari: "dhanbari",
-
-  // Upazilas - Chattogram Division
-  bandorbansadar: "bandarbansadar",
-  rowangchari: "rowangchhari",
-  motlobdokkhin: "matlabdakkhin",
-  motlobuttor: "matlabuttar",
-  faridgonj: "faridganj",
-  hazigonj: "hajiganj",
-  chandanish: "chandanaish",
-  patia: "patiya",
-  anowara: "anwara",
-  rouzan: "raozan",
-  mirsharai: "mirsarai",
-  bashkhali: "banshkhali",
-  nangolkot: "nangalkot",
-  chouddagram: "chauddagram",
-  titash: "titas",
-  burichong: "burichang",
-  eidgah: "eidgaon",
-  ukhiya: "ukhia",
-  moheskhali: "maheshkhali",
-  chagalnaia: "chhagalnaiya",
-  parshuram: "parashuram",
-  khagracharisadar: "khagrachharisadar",
-  panchari: "panchhari",
-  ramgor: "ramgarh",
-  manikchari: "manikchhari",
-  laxmichari: "lakkhichhari",
-  kompaniganj: "companiganj",
-  rajsthali: "rajasthali",
-  bilaichhori: "belaichhari",
-  jurachori: "jurachhari",
-  baghaichari: "baghaichhari",
-
-  // Upazilas - Khulna Division
-  morrelganj: "morelganj",
-  jessoresadar: "jashoresadar",
-  chougachha: "chaugachha",
-  sarsa: "sharsha",
-  monirampur: "manirampur",
-  keshobpur: "keshabpur",
-  horinakundu: "harinakundu",
-  shailakupa: "shailkupa",
-  tarokhada: "terokhada",
-  digalia: "dighalia",
-  devhata: "debhata",
-
-  // Upazilas - Rajshahi Division
-  bograsadar: "bogurasadar",
-  adomdighi: "adamdighi",
-  gabtoli: "gabtali",
-  kahalu: "kahaloo",
-  shibgonj: "shibganj",
-  sonatola: "sonatala",
-  sajahanpur: "shajahanpur",
-  nogaonsadar: "naogaonsadar",
-  patnitola: "patnitala",
-  dhamurhat: "dhamoirhat",
-  mohadebpur: "mahadebpur",
-  badalgachi: "badalgachhi",
-  niamotpur: "niamatpur",
-  boraigram: "baraigram",
-  noldanga: "naldanga",
-  gamostapur: "gomastapur",
-  nachol: "nachole",
-  faridpud: "faridpur",
-  poba: "paba",
-  baghmara: "bagmara",
-  mohonpur: "mohanpur",
-  ullapar: "ullapara",
-
-  // Upazilas - Sylhet Division
-  hobiganjsadar: "habiganjsadar",
-  shaestaganj: "shayestaganj",
-  baniachang: "baniachong",
-  srimangal: "sreemangal",
-  chatak: "chhatak",
-  duarabazar: "dowarabazar",
-  santigonj: "shantiganj",
-  dakshinsurma: "dakkhinsurma",
-  goainghat: "gowainghat",
-  zakigonj: "zakiganj",
-
-  // Upazilas - Barishal Division
-  uzirpur: "ujirpur",
-  gouranadi: "gaurnadi",
-  agailzhara: "agailjhara",
-  hizla: "hijla",
-  mahendiganj: "mehendiganj",
-  doulatkhan: "daulatkhan",
-  charfashion: "charfasson",
-  nalchhiti: "nalchhity",
-  kathalia: "kanthalia",
-  kaukhali: "kawkhali",
-
-  // Upazilas - Mymensingh Division
-  bakshigonj: "bakshiganj",
-  gaforgaon: "gafargaon",
-  phulpur: "fulpur",
-  isshwargonj: "ishwarganj",
-  purbadhola: "purbadhala",
-  jhinaigati: "jhenaigati",
-
-  // Upazilas - Rangpur Division
-  biral: "birol",
-  bachaganj: "bochaganj",
-  chrirbandar: "chirirbandar",
-  phulbari: "fulbari",
-  gobindoganj: "gobindaganj",
-  palashbsri: "palashbari",
-  saadullapur: "sadullapur",
-  kishoriganj: "kishoreganj",
-  syedpur: "saidpur",
-  dabiganj: "debiganj",
-  atwari: "atowari",
-  telulia: "tentulia",
-  pirgacha: "pirgachha",
-  horipur: "haripur",
-  ranisankail: "ranishankail",
-};
+function norm(s: string) {
+  if (!s) return "";
+  return s
+    .toLowerCase()
+    .replace(/\bupazila\b/g, "")
+    .replace(/\bthana\b/g, "")
+    .replace(/[^a-z0-9]/g, "");
+}
 
 function resolveColor(v: string) {
   if (typeof window === "undefined") return v;
@@ -195,28 +45,8 @@ function resolveColor(v: string) {
   );
 }
 
-function norm(s: string) {
-  if (!s) return "";
-
-  const clean = s
-    .toLowerCase()
-    .replace(/\bupazila\b/g, "")
-    .replace(/\bthana\b/g, "")
-    .replace(/[^a-z0-9]/g, "");
-
-  return NAME_MAPPING[clean] || clean;
-}
-
 function getDivisionColor(division: string) {
-  const directColor = DIVISION_COLORS[division];
-  if (directColor) return directColor;
-
-  const normalizedDivision = norm(division);
-  const matchingDivision = Object.keys(DIVISION_COLORS).find(
-    (key) => norm(key) === normalizedDivision,
-  );
-
-  return matchingDivision ? DIVISION_COLORS[matchingDivision] : "#3b82f6";
+  return DIVISION_COLORS[division] || "#3b82f6";
 }
 
 type Props = {
