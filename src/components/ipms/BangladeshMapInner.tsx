@@ -4,9 +4,7 @@ import { MapContainer, TileLayer, GeoJSON, CircleMarker, Tooltip, Pane, useMap }
 import type { Feature, FeatureCollection, Geometry } from "geojson";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-
-const DISTRICTS_URL =
-  "https://raw.githubusercontent.com/nuhil/bangladesh-geocode/master/geojson/districts.geojson";
+import districtsData from "../../data/districts.geojson.json";
 
 // Overpass API endpoint for fetching upazila boundaries from OpenStreetMap
 const OVERPASS_API = "https://overpass-api.de/api/interpreter";
@@ -309,12 +307,11 @@ export default function BangladeshMapInner({
 
   useEffect(() => {
     let aborted = false;
-    fetch(DISTRICTS_URL)
-      .then((r) => r.json())
-      .then((j) => {
-        if (!aborted) setData(j as FeatureCollection);
-      })
-      .catch((e) => !aborted && setError(String(e)));
+    try {
+      if (!aborted) setData(districtsData as FeatureCollection);
+    } catch (e) {
+      if (!aborted) setError(String(e));
+    }
     return () => {
       aborted = true;
     };

@@ -1,0 +1,104 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "ADM1_EN": "Dhaka",
+        "ADM2_EN": "Dhaka"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[90.1875, 23.88], [90.4375, 23.88], [90.4375, 23.63], [90.1875, 23.63], [90.1875, 23.88]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ADM1_EN": "Dhaka",
+        "ADM2_EN": "Narayanganj"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[90.4375, 23.88], [90.6875, 23.88], [90.6875, 23.63], [90.4375, 23.63], [90.4375, 23.88]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ADM1_EN": "Chattogram",
+        "ADM2_EN": "Chattogram"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[91.7, 22.5], [92.1, 22.5], [92.1, 22.1], [91.7, 22.1], [91.7, 22.5]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ADM1_EN": "Sylhet",
+        "ADM2_EN": "Sylhet"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[91.8, 24.9], [92.2, 24.9], [92.2, 24.5], [91.8, 24.5], [91.8, 24.9]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ADM1_EN": "Khulna",
+        "ADM2_EN": "Khulna"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[89.0, 22.8], [89.5, 22.8], [89.5, 22.3], [89.0, 22.3], [89.0, 22.8]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ADM1_EN": "Rajshahi",
+        "ADM2_EN": "Rajshahi"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[88.5, 24.6], [89.0, 24.6], [89.0, 24.1], [88.5, 24.1], [88.5, 24.6]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ADM1_EN": "Barishal",
+        "ADM2_EN": "Barishal"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[90.2, 22.5], [90.7, 22.5], [90.7, 22.0], [90.2, 22.0], [90.2, 22.5]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ADM1_EN": "Rangpur",
+        "ADM2_EN": "Rangpur"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[88.9, 25.9], [89.4, 25.9], [89.4, 25.4], [88.9, 25.4], [88.9, 25.9]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ADM1_EN": "Mymensingh",
+        "ADM2_EN": "Mymensingh"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[90.4, 24.8], [90.9, 24.8], [90.9, 24.3], [90.4, 24.3], [90.4, 24.8]]]
+      }
+    }
+  ]
+}
