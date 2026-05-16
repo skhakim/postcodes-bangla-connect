@@ -52,7 +52,7 @@ try {
         ADM1_EN: 'adm1_name',
         ADM2_EN: 'adm2_name',
         ADM3_EN: 'adm3_name'
-    }, 4);
+    }, 2);
     fs.writeFileSync('src/data/upazilas.geojson.json', JSON.stringify({ type: 'FeatureCollection', features: upazilas }));
 
     console.log('Success! All files updated.');
