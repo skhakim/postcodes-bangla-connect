@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { Search } from "lucide-react";
-import { divisions, postcodes } from "@/data/postcodes";
+import { postcodes, getDivisions, getDistricts, getUpazilas } from "@/data/postcodes";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -21,8 +21,8 @@ function SearchPage() {
   const [upazila, setUpazila] = useState<string>("");
   const [q, setQ] = useState("");
 
-  const districtOptions = division ? Object.keys(divisions[division] || {}) : [];
-  const upazilaOptions = division && district ? divisions[division]?.[district] || [] : [];
+  const districtOptions = division ? getDistricts(division) : [];
+  const upazilaOptions = division && district ? getUpazilas(division, district) : [];
 
   const results = useMemo(() => {
     let data = postcodes;
@@ -61,7 +61,7 @@ function SearchPage() {
           <Select value={division} onValueChange={(v) => { setDivision(v); setDistrict(""); setUpazila(""); }}>
             <SelectTrigger><SelectValue placeholder="Division" /></SelectTrigger>
             <SelectContent>
-              {Object.keys(divisions).map((d) => <SelectItem key={d} value={d}>{d}</SelectItem>)}
+              {getDivisions().map((d) => <SelectItem key={d} value={d}>{d}</SelectItem>)}
             </SelectContent>
           </Select>
           <Select value={district} onValueChange={(v) => { setDistrict(v); setUpazila(""); }} disabled={!division}>

@@ -75,9 +75,9 @@ function FeedbackPage() {
               <Select value={issue} onValueChange={setIssue}>
                 <SelectTrigger className="mt-1.5"><SelectValue placeholder="Select issue type" /></SelectTrigger>
                 <SelectContent>
+                  <SelectItem value="boundary">Boundary mismatch</SelectItem>
                   <SelectItem value="incorrect">Incorrect postcode</SelectItem>
                   <SelectItem value="missing">Missing area</SelectItem>
-                  <SelectItem value="boundary">Boundary mismatch</SelectItem>
                   <SelectItem value="other">Other</SelectItem>
                 </SelectContent>
               </Select>

@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { postcodes, divisions } from "@/data/postcodes";
+import { postcodes, getDivisions, getDistricts, getUpazilas, getPostcodes } from "@/data/postcodes";
 
 export const Route = createFileRoute("/_public/map")({
   component: MapPage,
@@ -23,11 +23,11 @@ function MapPage() {
   const [layer, setLayer] = useState<"standard" | "satellite" | "boundary">("standard");
   const inDivision = postcodes.filter((p) => p.division === selected);
   const districts = useMemo(
-    () => Object.keys(divisions[selected] ?? {}).sort(),
+    () => getDistricts(selected),
     [selected]
   );
   const upazilas = useMemo(
-    () => (district ? (divisions[selected]?.[district] ?? []) : []),
+    () => (district ? getUpazilas(selected, district) : []),
     [selected, district]
   );
   const inDistrict = useMemo(
@@ -69,7 +69,7 @@ function MapPage() {
           <Select value={selected} onValueChange={(v) => { setSelected(v); setDistrict(""); setUpazila(""); setPostcodeId(""); }}>
             <SelectTrigger><SelectValue placeholder="Division" /></SelectTrigger>
             <SelectContent>
-              {Object.keys(divisions).map((d) => <SelectItem key={d} value={d}>{d}</SelectItem>)}
+              {getDivisions().map((d) => <SelectItem key={d} value={d}>{d}</SelectItem>)}
             </SelectContent>
           </Select>
         </div>
@@ -96,7 +96,7 @@ function MapPage() {
             <SelectTrigger><SelectValue placeholder="Postcode" /></SelectTrigger>
             <SelectContent>
               <SelectItem value="__none">No postcode</SelectItem>
-              {inDistrict.map((p) => (
+              {getPostcodes(selected, district).filter((p) => !upazila || p.upazila === upazila).map((p) => (
                 <SelectItem key={p.id} value={p.id}>{p.postcode} — {p.area}</SelectItem>
               ))}
             </SelectContent>
