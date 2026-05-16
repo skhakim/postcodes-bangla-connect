@@ -1,0 +1,3197 @@
+{
+  "count": 228,
+  "items": [
+    {
+      "id": "0-0-0-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Polton Thana",
+      "office_name": "Dhaka GPO",
+      "post_code": "1000",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 0,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-0-1",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Polton Thana",
+      "office_name": "Dhaka GPO Night TSO",
+      "post_code": "1000",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 0,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "0-0-0-2",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Polton Thana",
+      "office_name": "Rajarbagh Police Line TSO",
+      "post_code": "1217",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 0,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "0-0-1-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Sutrapur Thana",
+      "office_name": "Dhaka Sadar HO",
+      "post_code": "1100",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 1,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-1-1",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Sutrapur Thana",
+      "office_name": "Dhaka Sadar Night TSO",
+      "post_code": "1100",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 1,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "0-0-1-2",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Sutrapur Thana",
+      "office_name": "Lakshibazar TSO",
+      "post_code": "1100",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 1,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "0-0-2-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Chalk Bazar Thana",
+      "office_name": "Chalk Bazar (Day) TSO",
+      "post_code": "1211",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 2,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-2-1",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Chalk Bazar Thana",
+      "office_name": "Alia Madrasha TSO",
+      "post_code": "1211",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 2,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "0-0-3-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Hazaribag Thana",
+      "office_name": "Leather Institute TSO",
+      "post_code": "1209",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 3,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-4-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Lalbag Thana",
+      "office_name": "Secondary Education TSO",
+      "post_code": "1211",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 4,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-4-1",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Lalbag Thana",
+      "office_name": "Azimpur Azad Press SO",
+      "post_code": "1205",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 4,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "0-0-4-2",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Lalbag Thana",
+      "office_name": "Posta TSO",
+      "post_code": "1211",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 4,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "0-0-5-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Kutuali Thana",
+      "office_name": "Dhaka Court TSO",
+      "post_code": "1100",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 5,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-5-1",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Kutuali Thana",
+      "office_name": "Jagannath University TSO",
+      "post_code": "1100",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 5,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "0-0-5-2",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Kutuali Thana",
+      "office_name": "Mitford TSO",
+      "post_code": "1100",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 5,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "0-0-5-3",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Kutuali Thana",
+      "office_name": "Dhaka Court (Night) TSO",
+      "post_code": "1100",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 5,
+        "post_office": 3
+      }
+    },
+    {
+      "id": "0-0-5-4",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Kutuali Thana",
+      "office_name": "B.I.W.T.A TSO",
+      "post_code": "1100",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 5,
+        "post_office": 4
+      }
+    },
+    {
+      "id": "0-0-6-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Gendaria Thana",
+      "office_name": "Doyagonj TSO",
+      "post_code": "1100",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 6,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-6-1",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Gendaria Thana",
+      "office_name": "Gendaria TSO",
+      "post_code": "1204",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 6,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "0-0-7-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Jatrabari Thana",
+      "office_name": "Jatrabari TSO",
+      "post_code": "1204",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 7,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-7-1",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Jatrabari Thana",
+      "office_name": "Sayedabad TSO",
+      "post_code": "1100",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 7,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "0-0-7-2",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Jatrabari Thana",
+      "office_name": "Matuail SO",
+      "post_code": "1362",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 7,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "0-0-7-3",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Jatrabari Thana",
+      "office_name": "Paradogair EDBO",
+      "post_code": "1362",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 7,
+        "post_office": 3
+      }
+    },
+    {
+      "id": "0-0-8-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Wari Thana",
+      "office_name": "Wari TSO Night TSO",
+      "post_code": "1203",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 8,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-8-1",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Wari Thana",
+      "office_name": "Nababpur (Day) TSO",
+      "post_code": "1100",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 8,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "0-0-8-2",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Wari Thana",
+      "office_name": "Wari TSO",
+      "post_code": "1203",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 8,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "0-0-8-3",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Wari Thana",
+      "office_name": "Nababpur (Night) TSO",
+      "post_code": "1100",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 8,
+        "post_office": 3
+      }
+    },
+    {
+      "id": "0-0-9-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Bongshal Thana",
+      "office_name": "Babu Bazar TSO",
+      "post_code": "1100",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 9,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-9-1",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Bongshal Thana",
+      "office_name": "Sk Burhauddin College TSO",
+      "post_code": "1100",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 9,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "0-0-10-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Sampur Thana",
+      "office_name": "Postagola TSO",
+      "post_code": "1204",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 10,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-11-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Kadamtoli Thana",
+      "office_name": "Dhania TSO",
+      "post_code": "1236",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 11,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-12-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Motijheel Thana",
+      "office_name": "Mobile-1 TSO",
+      "post_code": "1000",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 12,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-12-1",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Motijheel Thana",
+      "office_name": "Dilkusha TSO",
+      "post_code": "1000",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 12,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "0-0-12-2",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Motijheel Thana",
+      "office_name": "Bidc TSO",
+      "post_code": "1208",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 12,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "0-0-12-3",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Motijheel Thana",
+      "office_name": "Bangabhaban TSO",
+      "post_code": "1222",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 12,
+        "post_office": 3
+      }
+    },
+    {
+      "id": "0-0-13-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Newmarket Thana",
+      "office_name": "BDR Hq TSO",
+      "post_code": "1205",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 13,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-13-1",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Newmarket Thana",
+      "office_name": "Newmarket Night TSO",
+      "post_code": "1205",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 13,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "0-0-13-2",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Newmarket Thana",
+      "office_name": "New Market TSO",
+      "post_code": "1205",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 13,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "0-0-14-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Hatir Jheel Thana",
+      "office_name": "Mobile-2 TSO",
+      "post_code": "1000",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 14,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-15-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Banani Thana",
+      "office_name": "Public Health TSO",
+      "post_code": "1212",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 15,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-15-1",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Banani Thana",
+      "office_name": "Banani TSO",
+      "post_code": "1213",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 15,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "0-0-15-2",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Banani Thana",
+      "office_name": "Banani Night TSO",
+      "post_code": "1213",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 15,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "0-0-16-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Shahbag Thana",
+      "office_name": "High Court TSO",
+      "post_code": "1000",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 16,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-16-1",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Shahbag Thana",
+      "office_name": "Dhaka University TSO",
+      "post_code": "1000",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 16,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "0-0-16-2",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Shahbag Thana",
+      "office_name": "Dhaka Medical Collage TSO",
+      "post_code": "1000",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 16,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "0-0-16-3",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Shahbag Thana",
+      "office_name": "Bangla Academy TSO",
+      "post_code": "1000",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 16,
+        "post_office": 3
+      }
+    },
+    {
+      "id": "0-0-16-4",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Shahbag Thana",
+      "office_name": "Karzon Hall TSO",
+      "post_code": "1000",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 16,
+        "post_office": 4
+      }
+    },
+    {
+      "id": "0-0-16-5",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Shahbag Thana",
+      "office_name": "Buet TSO",
+      "post_code": "1000",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 16,
+        "post_office": 5
+      }
+    },
+    {
+      "id": "0-0-17-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Cantonment Thana",
+      "office_name": "Dhaka Cant Night TSO",
+      "post_code": "1206",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 17,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-17-1",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Cantonment Thana",
+      "office_name": "Manikdi TSO",
+      "post_code": "1206",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 17,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "0-0-17-2",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Cantonment Thana",
+      "office_name": "Air Hq TSO",
+      "post_code": "1206",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 17,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "0-0-17-3",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Cantonment Thana",
+      "office_name": "BAF Base TSO",
+      "post_code": "1206",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 17,
+        "post_office": 3
+      }
+    },
+    {
+      "id": "0-0-17-4",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Cantonment Thana",
+      "office_name": "Dhaka Cantonment TSO",
+      "post_code": "1206",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 17,
+        "post_office": 4
+      }
+    },
+    {
+      "id": "0-0-18-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Ramna Thana",
+      "office_name": "Shantinagar Nihgt TSO",
+      "post_code": "1217",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 18,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-18-1",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Ramna Thana",
+      "office_name": "Secreteriate 1St Phase TSO",
+      "post_code": "1000",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 18,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "0-0-18-2",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Ramna Thana",
+      "office_name": "Secreteriate 3Rd Phase TSO",
+      "post_code": "1000",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 18,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "0-0-18-3",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Ramna Thana",
+      "office_name": "Shantinagar TSO",
+      "post_code": "1217",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 18,
+        "post_office": 3
+      }
+    },
+    {
+      "id": "0-0-19-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Muhammadpur Thana",
+      "office_name": "Ganabhaban TSO",
+      "post_code": "1207",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 19,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-19-1",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Muhammadpur Thana",
+      "office_name": "Mohammadpur Night TSO",
+      "post_code": "1207",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 19,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "0-0-19-2",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Muhammadpur Thana",
+      "office_name": "Razia Sultana Rd TSO",
+      "post_code": "1207",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 19,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "0-0-19-3",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Muhammadpur Thana",
+      "office_name": "Mohanmadpur Housing TSO",
+      "post_code": "1207",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 19,
+        "post_office": 3
+      }
+    },
+    {
+      "id": "0-0-20-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Tejgaon Thana",
+      "office_name": "Green Rd SO",
+      "post_code": "1215",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 20,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-20-1",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Tejgaon Thana",
+      "office_name": "Khamarbari TSO",
+      "post_code": "1215",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 20,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "0-0-20-2",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Tejgaon Thana",
+      "office_name": "Tejgaon TSO",
+      "post_code": "1215",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 20,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "0-0-21-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Kasrul Thana",
+      "office_name": "Mirpur Police Complex TSO",
+      "post_code": "1206",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 21,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-22-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Sher-E-Banglanagar Thana",
+      "office_name": "Tejgaon Air Port TSO",
+      "post_code": "1207",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 22,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-22-1",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Sher-E-Banglanagar Thana",
+      "office_name": "Gazetted Officers Hostel TSO",
+      "post_code": "1207",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 22,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "0-0-22-2",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Sher-E-Banglanagar Thana",
+      "office_name": "Sangsad Bhaban TSO",
+      "post_code": "1207",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 22,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "0-0-22-3",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Sher-E-Banglanagar Thana",
+      "office_name": "Sher-E-Banglanagar TSO",
+      "post_code": "1207",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 22,
+        "post_office": 3
+      }
+    },
+    {
+      "id": "0-0-22-4",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Sher-E-Banglanagar Thana",
+      "office_name": "Karigori Shikkha Board TSO",
+      "post_code": "1210",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 22,
+        "post_office": 4
+      }
+    },
+    {
+      "id": "0-0-22-5",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Sher-E-Banglanagar Thana",
+      "office_name": "Agargoan TSO",
+      "post_code": "1207",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 22,
+        "post_office": 5
+      }
+    },
+    {
+      "id": "0-0-23-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Shahali Thana",
+      "office_name": "Bd Sarif TSO",
+      "post_code": "1216",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 23,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-23-1",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Shahali Thana",
+      "office_name": "Mirpur Zoo TSO",
+      "post_code": "1216",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 23,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "0-0-24-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Mirpur Thana",
+      "office_name": "Mirpur Night TSO",
+      "post_code": "1216",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 24,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-24-1",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Mirpur Thana",
+      "office_name": "Mirpur TSO",
+      "post_code": "1216",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 24,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "0-0-24-2",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Mirpur Thana",
+      "office_name": "Kallayanpur TSO",
+      "post_code": "1207",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 24,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "0-0-25-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Badda Thana",
+      "office_name": "Badda TSO",
+      "post_code": "1212",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 25,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-25-1",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Badda Thana",
+      "office_name": "Satarkul EDBO",
+      "post_code": "1212",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 25,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "0-0-25-2",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Badda Thana",
+      "office_name": "Boro Beraid EDBO",
+      "post_code": "1212",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 25,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "0-0-26-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Hazaribagh Thana",
+      "office_name": "Jigatola TSO",
+      "post_code": "1209",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 26,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-26-1",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Hazaribagh Thana",
+      "office_name": "Islami Arbi University TSO",
+      "post_code": "1231",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 26,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "0-0-27-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Uttara West Thana",
+      "office_name": "Hazi Camp TSO",
+      "post_code": "1230",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 27,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-27-1",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Uttara West Thana",
+      "office_name": "Uttara Model Town TSO",
+      "post_code": "1230",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 27,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "0-0-28-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Tejgaon Industrial Area Thana",
+      "office_name": "Dpi TSO",
+      "post_code": "1208",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 28,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-28-1",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Tejgaon Industrial Area Thana",
+      "office_name": "Tejgaon E Comerce Centere TSO",
+      "post_code": "1208",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 28,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "0-0-29-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Pallabi Thana",
+      "office_name": "Mirpur Cantt TSO",
+      "post_code": "1216",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 29,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-29-1",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Pallabi Thana",
+      "office_name": "Pallabi TSO",
+      "post_code": "1216",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 29,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "0-0-30-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Gulshan Thana",
+      "office_name": "Gulshan Model Town TSO",
+      "post_code": "1212",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 30,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-31-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Sobujbag Thana",
+      "office_name": "Basabo TSO",
+      "post_code": "1214",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 31,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-31-1",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Sobujbag Thana",
+      "office_name": "Uttar Manikdia EDBO",
+      "post_code": "1214",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 31,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "0-0-32-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Khilgaon Thana",
+      "office_name": "Khilgaon TSO",
+      "post_code": "1219",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 32,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-32-1",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Khilgaon Thana",
+      "office_name": "Dasherkandi EDBO",
+      "post_code": "1214",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 32,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "0-0-33-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Khilkhet Thana",
+      "office_name": "Khilkhet TSO",
+      "post_code": "1229",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 33,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-33-1",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Khilkhet Thana",
+      "office_name": "Borura EDBO",
+      "post_code": "1229",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 33,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "0-0-33-2",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Khilkhet Thana",
+      "office_name": "Talna EDBO",
+      "post_code": "1229",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 33,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "0-0-34-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Vatara Thana",
+      "office_name": "Vatara TSO",
+      "post_code": "1245",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 34,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-35-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Uttarkhan Thana",
+      "office_name": "Uttarkhan Mazar EDBO",
+      "post_code": "1230",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 35,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-35-1",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Uttarkhan Thana",
+      "office_name": "Uttarkhan EDBO",
+      "post_code": "1230",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 35,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "0-0-35-2",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Uttarkhan Thana",
+      "office_name": "Uzampur EDBO",
+      "post_code": "3210",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 35,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "0-0-35-3",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Uttarkhan Thana",
+      "office_name": "Kanchkura EDBO",
+      "post_code": "1230",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 35,
+        "post_office": 3
+      }
+    },
+    {
+      "id": "0-0-36-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Rampura Thana",
+      "office_name": "Banasri EDBO",
+      "post_code": "1219",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 36,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-37-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Mugda Thana",
+      "office_name": "Manda EDBO",
+      "post_code": "1214",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 37,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-38-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Dakshin Khan Thana",
+      "office_name": "Ashkona EDBO",
+      "post_code": "1230",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 38,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-38-1",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Dakshin Khan Thana",
+      "office_name": "Azampur EDBO",
+      "post_code": "1230",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 38,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "0-0-38-2",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Dakshin Khan Thana",
+      "office_name": "Dakshin Khan EDBO",
+      "post_code": "1230",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 38,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "0-0-38-3",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Dakshin Khan Thana",
+      "office_name": "Faydabad Madrasha EDBO",
+      "post_code": "1230",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 38,
+        "post_office": 3
+      }
+    },
+    {
+      "id": "0-0-39-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Turag Thana",
+      "office_name": "Vadaldi EDBO",
+      "post_code": "1230",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 39,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-45-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Demra Thana",
+      "office_name": "Demra SO",
+      "post_code": "1360",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 45,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-45-1",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Demra Thana",
+      "office_name": "Sarulia SO",
+      "post_code": "1361",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 45,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "0-0-45-2",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Demra Thana",
+      "office_name": "Tushardhara EDBO",
+      "post_code": "1362",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 45,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "0-0-45-3",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Demra Thana",
+      "office_name": "Mizmizi Bazar EDBO",
+      "post_code": "1430",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 45,
+        "post_office": 3
+      }
+    },
+    {
+      "id": "0-0-45-4",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Demra Thana",
+      "office_name": "Chouhat EDBO",
+      "post_code": "1943",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 45,
+        "post_office": 4
+      }
+    },
+    {
+      "id": "0-0-45-5",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Demra Thana",
+      "office_name": "Rajapur EDBO",
+      "post_code": "1943",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 45,
+        "post_office": 5
+      }
+    },
+    {
+      "id": "0-0-46-0",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Kodomtoli Thana",
+      "office_name": "Habibnagar EDBO",
+      "post_code": "1362",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 46,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "0-0-46-1",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Kodomtoli Thana",
+      "office_name": "Merajnagar EDBO",
+      "post_code": "1362",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 46,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "1-3-0-0",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Kotwali Thana",
+      "office_name": "Chittagong GPO",
+      "post_code": "4000",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 0,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "1-3-0-1",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Kotwali Thana",
+      "office_name": "Ctg. GPO Night SO",
+      "post_code": "4000",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 0,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "1-3-0-2",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Kotwali Thana",
+      "office_name": "Crb TSO",
+      "post_code": "4000",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 0,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "1-3-0-3",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Kotwali Thana",
+      "office_name": "Riazuddin Bazar TSO",
+      "post_code": "4000",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 0,
+        "post_office": 3
+      }
+    },
+    {
+      "id": "1-3-0-4",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Kotwali Thana",
+      "office_name": "Ctg Court Building TSO",
+      "post_code": "4000",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 0,
+        "post_office": 4
+      }
+    },
+    {
+      "id": "1-3-0-5",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Kotwali Thana",
+      "office_name": "Andorkilla TSO",
+      "post_code": "4000",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 0,
+        "post_office": 5
+      }
+    },
+    {
+      "id": "1-3-0-6",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Kotwali Thana",
+      "office_name": "Lama Bazar TSO",
+      "post_code": "4000",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 0,
+        "post_office": 6
+      }
+    },
+    {
+      "id": "1-3-0-7",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Kotwali Thana",
+      "office_name": "Baitush Sharaf TSO",
+      "post_code": "4000",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 0,
+        "post_office": 7
+      }
+    },
+    {
+      "id": "1-3-0-8",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Kotwali Thana",
+      "office_name": "Riazuddin Bazar Night TSO",
+      "post_code": "4000",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 0,
+        "post_office": 8
+      }
+    },
+    {
+      "id": "1-3-1-0",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Double Mooring Thana",
+      "office_name": "Agrabad Night TSO",
+      "post_code": "4100",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 1,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "1-3-1-1",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Double Mooring Thana",
+      "office_name": "Central Govt. Office Building TSO",
+      "post_code": "4000",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 1,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "1-3-1-2",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Double Mooring Thana",
+      "office_name": "Double Muring TSO",
+      "post_code": "4100",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 1,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "1-3-1-3",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Double Mooring Thana",
+      "office_name": "Pathantuli Day TSO",
+      "post_code": "4000",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 1,
+        "post_office": 3
+      }
+    },
+    {
+      "id": "1-3-1-4",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Double Mooring Thana",
+      "office_name": "Pathantuli Night TSO",
+      "post_code": "4000",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 1,
+        "post_office": 4
+      }
+    },
+    {
+      "id": "1-3-1-5",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Double Mooring Thana",
+      "office_name": "Agrabad TSO",
+      "post_code": "4000",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 1,
+        "post_office": 5
+      }
+    },
+    {
+      "id": "1-3-2-0",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Akbarshah Thana",
+      "office_name": "North Katuli TSO",
+      "post_code": "4217",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 2,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "1-3-2-1",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Akbarshah Thana",
+      "office_name": "Ustc TSO",
+      "post_code": "4000",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 2,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "1-3-3-0",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Patenga Thana",
+      "office_name": "Madhya Patenga Choudhurypara TSO",
+      "post_code": "4222",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 3,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "1-3-3-1",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Patenga Thana",
+      "office_name": "Patenga TSO",
+      "post_code": "4204",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 3,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "1-3-3-2",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Patenga Thana",
+      "office_name": "Chittagong Airport TSO",
+      "post_code": "4205",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 3,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "1-3-4-0",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Pahartoli Thana",
+      "office_name": "Pahartoli TSO",
+      "post_code": "4202",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 4,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "1-3-4-1",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Pahartoli Thana",
+      "office_name": "Firozshah Collony TSO",
+      "post_code": "4207",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 4,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "1-3-4-2",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Pahartoli Thana",
+      "office_name": "Ctg Customs Accademy TSO",
+      "post_code": "4219",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 4,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "1-3-5-0",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Bayazid Thana",
+      "office_name": "Cig Politechnic Ins TSO",
+      "post_code": "4209",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 5,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "1-3-5-1",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Bayazid Thana",
+      "office_name": "Bayezid Bostami",
+      "post_code": "4210",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 5,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "1-3-5-2",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Bayazid Thana",
+      "office_name": "Jalalabad Saleh Bazar TSO",
+      "post_code": "4214",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 5,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "1-3-5-3",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Bayazid Thana",
+      "office_name": "Ctg Cantontment TSO",
+      "post_code": "4220",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 5,
+        "post_office": 3
+      }
+    },
+    {
+      "id": "1-3-5-4",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Bayazid Thana",
+      "office_name": "Bayezid Bostami Night TSO",
+      "post_code": "4210",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 5,
+        "post_office": 4
+      }
+    },
+    {
+      "id": "1-3-6-0",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Chandgaon Thana",
+      "office_name": "Chandgaon TSO",
+      "post_code": "4212",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 6,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "1-3-6-1",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Chandgaon Thana",
+      "office_name": "Wazodia Madrasha TSO",
+      "post_code": "4213",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 6,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "1-3-6-2",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Chandgaon Thana",
+      "office_name": "Mohara TSO",
+      "post_code": "4208",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 6,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "1-3-6-3",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Chandgaon Thana",
+      "office_name": "Al-Amin Baria Madrasha SO",
+      "post_code": "4221",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 6,
+        "post_office": 3
+      }
+    },
+    {
+      "id": "1-3-6-4",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Chandgaon Thana",
+      "office_name": "Mabinija EDBO",
+      "post_code": "4000",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 6,
+        "post_office": 4
+      }
+    },
+    {
+      "id": "1-3-6-5",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Chandgaon Thana",
+      "office_name": "Darul Ma-Ari EDBO",
+      "post_code": "4000",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 6,
+        "post_office": 5
+      }
+    },
+    {
+      "id": "1-3-6-6",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Chandgaon Thana",
+      "office_name": "Chaktai TSO",
+      "post_code": "4000",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 6,
+        "post_office": 6
+      }
+    },
+    {
+      "id": "1-3-6-7",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Chandgaon Thana",
+      "office_name": "Ctg. Hazi Camp TSO",
+      "post_code": "4000",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 6,
+        "post_office": 7
+      }
+    },
+    {
+      "id": "1-3-6-8",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Chandgaon Thana",
+      "office_name": "Ctg. Zame Mosjid TSO",
+      "post_code": "4000",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 6,
+        "post_office": 8
+      }
+    },
+    {
+      "id": "1-3-6-9",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Chandgaon Thana",
+      "office_name": "Dampara TSO",
+      "post_code": "4000",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 6,
+        "post_office": 9
+      }
+    },
+    {
+      "id": "1-3-6-10",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Chandgaon Thana",
+      "office_name": "Kubuis Maldia Madrasha TSO",
+      "post_code": "4000",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 6,
+        "post_office": 10
+      }
+    },
+    {
+      "id": "1-3-7-0",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Halishahar Thana",
+      "office_name": "Anandabazar SO",
+      "post_code": "4215",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 7,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "1-3-7-1",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Halishahar Thana",
+      "office_name": "Hallshahar Houning Estate TSO",
+      "post_code": "4216",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 7,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "1-3-7-2",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Halishahar Thana",
+      "office_name": "Rampur TSO",
+      "post_code": "4224",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 7,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "1-3-7-3",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Halishahar Thana",
+      "office_name": "North Hallshahar TSO",
+      "post_code": "4226",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 7,
+        "post_office": 3
+      }
+    },
+    {
+      "id": "1-3-8-0",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Bandar Thana",
+      "office_name": "Chittagong Bandar HO",
+      "post_code": "4100",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 8,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "1-3-8-1",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Bandar Thana",
+      "office_name": "Custom House TSO",
+      "post_code": "4100",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 8,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "1-3-9-0",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "EPZ Thana",
+      "office_name": "Ctg Sallers Colony TSO",
+      "post_code": "4218",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 9,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "1-3-9-1",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "EPZ Thana",
+      "office_name": "EPZ Ctg TSO",
+      "post_code": "4223",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 9,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "1-3-9-2",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "EPZ Thana",
+      "office_name": "EPZ Night TSO",
+      "post_code": "4223",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 9,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "1-3-10-0",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Chawkbazar Thana",
+      "office_name": "Chawkbazar TSO",
+      "post_code": "4203",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 10,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "1-3-10-1",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Chawkbazar Thana",
+      "office_name": "Chakbazar Night SO",
+      "post_code": "4203",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 10,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "1-3-10-2",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Chawkbazar Thana",
+      "office_name": "Ctg Govt College TSO",
+      "post_code": "4203",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 10,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "1-3-10-3",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Chawkbazar Thana",
+      "office_name": "Ctg. Medical College TSO",
+      "post_code": "4000",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 10,
+        "post_office": 3
+      }
+    },
+    {
+      "id": "1-3-11-0",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Panchlaaish Thana",
+      "office_name": "Chittagong Education Board TSO",
+      "post_code": "4000",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 11,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "1-3-11-1",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Panchlaaish Thana",
+      "office_name": "Amin Jute Mills TSO",
+      "post_code": "4211",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 11,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "1-3-12-0",
+      "division": "Chittagong",
+      "district": "Chittagong",
+      "upazila": "Khulsi Thana",
+      "office_name": "Zakir Hussain Rd TSO",
+      "post_code": "4225",
+      "source_index": {
+        "division": 1,
+        "district": 3,
+        "police_station": 12,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "2-4-0-0",
+      "division": "Khulna",
+      "district": "Khulna",
+      "upazila": "Khulna Sadar Thana",
+      "office_name": "Khulna City HO",
+      "post_code": "9100",
+      "source_index": {
+        "division": 2,
+        "district": 4,
+        "police_station": 0,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "2-4-0-1",
+      "division": "Khulna",
+      "district": "Khulna",
+      "upazila": "Khulna Sadar Thana",
+      "office_name": "Koylaghata TSO",
+      "post_code": "9100",
+      "source_index": {
+        "division": 2,
+        "district": 4,
+        "police_station": 0,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "2-4-0-2",
+      "division": "Khulna",
+      "district": "Khulna",
+      "upazila": "Khulna Sadar Thana",
+      "office_name": "Khulna Court TSO",
+      "post_code": "9100",
+      "source_index": {
+        "division": 2,
+        "district": 4,
+        "police_station": 0,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "2-4-0-3",
+      "division": "Khulna",
+      "district": "Khulna",
+      "upazila": "Khulna Sadar Thana",
+      "office_name": "Khulna Bazar TSO",
+      "post_code": "9100",
+      "source_index": {
+        "division": 2,
+        "district": 4,
+        "police_station": 0,
+        "post_office": 3
+      }
+    },
+    {
+      "id": "2-4-0-4",
+      "division": "Khulna",
+      "district": "Khulna",
+      "upazila": "Khulna Sadar Thana",
+      "office_name": "Khulna Bazar Night TSO",
+      "post_code": "9100",
+      "source_index": {
+        "division": 2,
+        "district": 4,
+        "police_station": 0,
+        "post_office": 4
+      }
+    },
+    {
+      "id": "2-4-0-5",
+      "division": "Khulna",
+      "district": "Khulna",
+      "upazila": "Khulna Sadar Thana",
+      "office_name": "Khulna GPO Night TSO",
+      "post_code": "9100",
+      "source_index": {
+        "division": 2,
+        "district": 4,
+        "police_station": 0,
+        "post_office": 5
+      }
+    },
+    {
+      "id": "2-4-0-6",
+      "division": "Khulna",
+      "district": "Khulna",
+      "upazila": "Khulna Sadar Thana",
+      "office_name": "Kdsb TSO",
+      "post_code": "9100",
+      "source_index": {
+        "division": 2,
+        "district": 4,
+        "police_station": 0,
+        "post_office": 6
+      }
+    },
+    {
+      "id": "2-4-0-7",
+      "division": "Khulna",
+      "district": "Khulna",
+      "upazila": "Khulna Sadar Thana",
+      "office_name": "Bania Khamar TSO",
+      "post_code": "9100",
+      "source_index": {
+        "division": 2,
+        "district": 4,
+        "police_station": 0,
+        "post_office": 7
+      }
+    },
+    {
+      "id": "2-4-0-8",
+      "division": "Khulna",
+      "district": "Khulna",
+      "upazila": "Khulna Sadar Thana",
+      "office_name": "Dolkhola EDSO",
+      "post_code": "9100",
+      "source_index": {
+        "division": 2,
+        "district": 4,
+        "police_station": 0,
+        "post_office": 8
+      }
+    },
+    {
+      "id": "2-4-1-0",
+      "division": "Khulna",
+      "district": "Khulna",
+      "upazila": "Khalishpur Thana",
+      "office_name": "Khulna GPO",
+      "post_code": "9000",
+      "source_index": {
+        "division": 2,
+        "district": 4,
+        "police_station": 1,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "2-4-1-1",
+      "division": "Khulna",
+      "district": "Khulna",
+      "upazila": "Khalishpur Thana",
+      "office_name": "Custom House TSO",
+      "post_code": "9000",
+      "source_index": {
+        "division": 2,
+        "district": 4,
+        "police_station": 1,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "2-4-1-2",
+      "division": "Khulna",
+      "district": "Khulna",
+      "upazila": "Khalishpur Thana",
+      "office_name": "Cresent Jute Mills TSO",
+      "post_code": "9000",
+      "source_index": {
+        "division": 2,
+        "district": 4,
+        "police_station": 1,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "2-4-1-3",
+      "division": "Khulna",
+      "district": "Khulna",
+      "upazila": "Khalishpur Thana",
+      "office_name": "Kia TSO",
+      "post_code": "9000",
+      "source_index": {
+        "division": 2,
+        "district": 4,
+        "police_station": 1,
+        "post_office": 3
+      }
+    },
+    {
+      "id": "2-4-1-4",
+      "division": "Khulna",
+      "district": "Khulna",
+      "upazila": "Khalishpur Thana",
+      "office_name": "Bidc Road TSO",
+      "post_code": "9000",
+      "source_index": {
+        "division": 2,
+        "district": 4,
+        "police_station": 1,
+        "post_office": 4
+      }
+    },
+    {
+      "id": "2-4-1-5",
+      "division": "Khulna",
+      "district": "Khulna",
+      "upazila": "Khalishpur Thana",
+      "office_name": "Boyra Police Line TSO",
+      "post_code": "9000",
+      "source_index": {
+        "division": 2,
+        "district": 4,
+        "police_station": 1,
+        "post_office": 5
+      }
+    },
+    {
+      "id": "2-4-1-6",
+      "division": "Khulna",
+      "district": "Khulna",
+      "upazila": "Khalishpur Thana",
+      "office_name": "Town Khalishpur TSO",
+      "post_code": "9000",
+      "source_index": {
+        "division": 2,
+        "district": 4,
+        "police_station": 1,
+        "post_office": 6
+      }
+    },
+    {
+      "id": "2-4-1-7",
+      "division": "Khulna",
+      "district": "Khulna",
+      "upazila": "Khalishpur Thana",
+      "office_name": "Muzgunni TSO",
+      "post_code": "9000",
+      "source_index": {
+        "division": 2,
+        "district": 4,
+        "police_station": 1,
+        "post_office": 7
+      }
+    },
+    {
+      "id": "2-4-1-8",
+      "division": "Khulna",
+      "district": "Khulna",
+      "upazila": "Khalishpur Thana",
+      "office_name": "Mobile TSO",
+      "post_code": "9000",
+      "source_index": {
+        "division": 2,
+        "district": 4,
+        "police_station": 1,
+        "post_office": 8
+      }
+    },
+    {
+      "id": "2-4-1-9",
+      "division": "Khulna",
+      "district": "Khulna",
+      "upazila": "Khalishpur Thana",
+      "office_name": "BDR Camp EDSO",
+      "post_code": "9000",
+      "source_index": {
+        "division": 2,
+        "district": 4,
+        "police_station": 1,
+        "post_office": 9
+      }
+    },
+    {
+      "id": "2-4-1-10",
+      "division": "Khulna",
+      "district": "Khulna",
+      "upazila": "Khalishpur Thana",
+      "office_name": "Khulna Polytechnic Institute EDBO",
+      "post_code": "9000",
+      "source_index": {
+        "division": 2,
+        "district": 4,
+        "police_station": 1,
+        "post_office": 10
+      }
+    },
+    {
+      "id": "2-4-2-0",
+      "division": "Khulna",
+      "district": "Khulna",
+      "upazila": "Sonadanga Thana",
+      "office_name": "Boyra Postal Colony TSO",
+      "post_code": "9000",
+      "source_index": {
+        "division": 2,
+        "district": 4,
+        "police_station": 2,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "2-4-2-1",
+      "division": "Khulna",
+      "district": "Khulna",
+      "upazila": "Sonadanga Thana",
+      "office_name": "KDA Newmarket TSO",
+      "post_code": "9000",
+      "source_index": {
+        "division": 2,
+        "district": 4,
+        "police_station": 2,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "2-4-2-2",
+      "division": "Khulna",
+      "district": "Khulna",
+      "upazila": "Sonadanga Thana",
+      "office_name": "DCS TSO",
+      "post_code": "9000",
+      "source_index": {
+        "division": 2,
+        "district": 4,
+        "police_station": 2,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "2-4-2-3",
+      "division": "Khulna",
+      "district": "Khulna",
+      "upazila": "Sonadanga Thana",
+      "office_name": "Khulna Medical College TSO",
+      "post_code": "9000",
+      "source_index": {
+        "division": 2,
+        "district": 4,
+        "police_station": 2,
+        "post_office": 3
+      }
+    },
+    {
+      "id": "2-4-3-0",
+      "division": "Khulna",
+      "district": "Khulna",
+      "upazila": "Doulatpur Thana",
+      "office_name": "Doulatpur TSO",
+      "post_code": "9202",
+      "source_index": {
+        "division": 2,
+        "district": 4,
+        "police_station": 3,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "2-4-3-1",
+      "division": "Khulna",
+      "district": "Khulna",
+      "upazila": "Doulatpur Thana",
+      "office_name": "Daulatpur Night TSO",
+      "post_code": "9000",
+      "source_index": {
+        "division": 2,
+        "district": 4,
+        "police_station": 3,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "2-4-3-2",
+      "division": "Khulna",
+      "district": "Khulna",
+      "upazila": "Doulatpur Thana",
+      "office_name": "Pabla EDSO",
+      "post_code": "9202",
+      "source_index": {
+        "division": 2,
+        "district": 4,
+        "police_station": 3,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "2-4-3-3",
+      "division": "Khulna",
+      "district": "Khulna",
+      "upazila": "Doulatpur Thana",
+      "office_name": "BL College TSO",
+      "post_code": "9000",
+      "source_index": {
+        "division": 2,
+        "district": 4,
+        "police_station": 3,
+        "post_office": 3
+      }
+    },
+    {
+      "id": "2-4-4-0",
+      "division": "Khulna",
+      "district": "Khulna",
+      "upazila": "Khanjahan Ail Thana",
+      "office_name": "Phulbari Gate TSO",
+      "post_code": "9000",
+      "source_index": {
+        "division": 2,
+        "district": 4,
+        "police_station": 4,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "2-4-4-1",
+      "division": "Khulna",
+      "district": "Khulna",
+      "upazila": "Khanjahan Ail Thana",
+      "office_name": "KUET TSO",
+      "post_code": "9203",
+      "source_index": {
+        "division": 2,
+        "district": 4,
+        "police_station": 4,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "2-4-4-2",
+      "division": "Khulna",
+      "district": "Khulna",
+      "upazila": "Khanjahan Ail Thana",
+      "office_name": "Moheshwarpasha EDBO",
+      "post_code": "9203",
+      "source_index": {
+        "division": 2,
+        "district": 4,
+        "police_station": 4,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "2-4-4-3",
+      "division": "Khulna",
+      "district": "Khulna",
+      "upazila": "Khanjahan Ail Thana",
+      "office_name": "Siramani TSO",
+      "post_code": "9204",
+      "source_index": {
+        "division": 2,
+        "district": 4,
+        "police_station": 4,
+        "post_office": 3
+      }
+    },
+    {
+      "id": "2-4-4-4",
+      "division": "Khulna",
+      "district": "Khulna",
+      "upazila": "Khanjahan Ail Thana",
+      "office_name": "Jahanabad Cantt.",
+      "post_code": "9205",
+      "source_index": {
+        "division": 2,
+        "district": 4,
+        "police_station": 4,
+        "post_office": 4
+      }
+    },
+    {
+      "id": "2-4-4-5",
+      "division": "Khulna",
+      "district": "Khulna",
+      "upazila": "Khanjahan Ail Thana",
+      "office_name": "Sonali Jute Mills TSO",
+      "post_code": "9206",
+      "source_index": {
+        "division": 2,
+        "district": 4,
+        "police_station": 4,
+        "post_office": 5
+      }
+    },
+    {
+      "id": "2-4-5-0",
+      "division": "Khulna",
+      "district": "Khulna",
+      "upazila": "Labanchora Thana",
+      "office_name": "Atra Shilpa Area TSO",
+      "post_code": "9207",
+      "source_index": {
+        "division": 2,
+        "district": 4,
+        "police_station": 5,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "2-4-6-0",
+      "division": "Khulna",
+      "district": "Khulna",
+      "upazila": "Horintana Thana",
+      "office_name": "Khulna University TSO",
+      "post_code": "9208",
+      "source_index": {
+        "division": 2,
+        "district": 4,
+        "police_station": 6,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "3-6-9-0",
+      "division": "Rajshahi",
+      "district": "Rajshahi",
+      "upazila": "Katakhali Thana",
+      "office_name": "Rajshahi Sugar Mills SO",
+      "post_code": "6211",
+      "source_index": {
+        "division": 3,
+        "district": 6,
+        "police_station": 9,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "3-6-10-0",
+      "division": "Rajshahi",
+      "district": "Rajshahi",
+      "upazila": "Motihar Thana",
+      "office_name": "Shaympur EDSO",
+      "post_code": "6212",
+      "source_index": {
+        "division": 3,
+        "district": 6,
+        "police_station": 10,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "3-6-10-1",
+      "division": "Rajshahi",
+      "district": "Rajshahi",
+      "upazila": "Motihar Thana",
+      "office_name": "Kazla TSO",
+      "post_code": "6204",
+      "source_index": {
+        "division": 3,
+        "district": 6,
+        "police_station": 10,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "3-6-10-2",
+      "division": "Rajshahi",
+      "district": "Rajshahi",
+      "upazila": "Motihar Thana",
+      "office_name": "Rajshahi University TSO",
+      "post_code": "6205",
+      "source_index": {
+        "division": 3,
+        "district": 6,
+        "police_station": 10,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "3-6-10-3",
+      "division": "Rajshahi",
+      "district": "Rajshahi",
+      "upazila": "Motihar Thana",
+      "office_name": "Binodpur Bazar TSO",
+      "post_code": "6206",
+      "source_index": {
+        "division": 3,
+        "district": 6,
+        "police_station": 10,
+        "post_office": 3
+      }
+    },
+    {
+      "id": "3-6-10-4",
+      "division": "Rajshahi",
+      "district": "Rajshahi",
+      "upazila": "Motihar Thana",
+      "office_name": "Budhpara EDBO",
+      "post_code": "6205",
+      "source_index": {
+        "division": 3,
+        "district": 6,
+        "police_station": 10,
+        "post_office": 4
+      }
+    },
+    {
+      "id": "3-6-11-0",
+      "division": "Rajshahi",
+      "district": "Rajshahi",
+      "upazila": "Rajpara Thana",
+      "office_name": "Rajshahi GPO",
+      "post_code": "6000",
+      "source_index": {
+        "division": 3,
+        "district": 6,
+        "police_station": 11,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "3-6-11-1",
+      "division": "Rajshahi",
+      "district": "Rajshahi",
+      "upazila": "Rajpara Thana",
+      "office_name": "Rajshahi Police Line TSO",
+      "post_code": "6000",
+      "source_index": {
+        "division": 3,
+        "district": 6,
+        "police_station": 11,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "3-6-11-2",
+      "division": "Rajshahi",
+      "district": "Rajshahi",
+      "upazila": "Rajpara Thana",
+      "office_name": "Rajshahi GPO Night TSO",
+      "post_code": "6000",
+      "source_index": {
+        "division": 3,
+        "district": 6,
+        "police_station": 11,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "3-6-11-3",
+      "division": "Rajshahi",
+      "district": "Rajshahi",
+      "upazila": "Rajpara Thana",
+      "office_name": "Rajshahi Court TSO",
+      "post_code": "6201",
+      "source_index": {
+        "division": 3,
+        "district": 6,
+        "police_station": 11,
+        "post_office": 3
+      }
+    },
+    {
+      "id": "3-6-12-0",
+      "division": "Rajshahi",
+      "district": "Rajshahi",
+      "upazila": "Kashiadanga Thana",
+      "office_name": "Miapur EDBO",
+      "post_code": "6201",
+      "source_index": {
+        "division": 3,
+        "district": 6,
+        "police_station": 12,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "3-6-13-0",
+      "division": "Rajshahi",
+      "district": "Rajshahi",
+      "upazila": "Boalia Thana",
+      "office_name": "Rajshahi Cantt TSO",
+      "post_code": "6202",
+      "source_index": {
+        "division": 3,
+        "district": 6,
+        "police_station": 13,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "3-6-13-1",
+      "division": "Rajshahi",
+      "district": "Rajshahi",
+      "upazila": "Boalia Thana",
+      "office_name": "Rajshahi Railway Station TSO",
+      "post_code": "6100",
+      "source_index": {
+        "division": 3,
+        "district": 6,
+        "police_station": 13,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "3-6-13-2",
+      "division": "Rajshahi",
+      "district": "Rajshahi",
+      "upazila": "Boalia Thana",
+      "office_name": "Ghoramara HO",
+      "post_code": "6100",
+      "source_index": {
+        "division": 3,
+        "district": 6,
+        "police_station": 13,
+        "post_office": 2
+      }
+    },
+    {
+      "id": "3-6-13-3",
+      "division": "Rajshahi",
+      "district": "Rajshahi",
+      "upazila": "Boalia Thana",
+      "office_name": "Ghoramara Night TSO",
+      "post_code": "6100",
+      "source_index": {
+        "division": 3,
+        "district": 6,
+        "police_station": 13,
+        "post_office": 3
+      }
+    },
+    {
+      "id": "3-6-13-4",
+      "division": "Rajshahi",
+      "district": "Rajshahi",
+      "upazila": "Boalia Thana",
+      "office_name": "Shabeb Bazar TSO",
+      "post_code": "6100",
+      "source_index": {
+        "division": 3,
+        "district": 6,
+        "police_station": 13,
+        "post_office": 4
+      }
+    },
+    {
+      "id": "3-6-13-5",
+      "division": "Rajshahi",
+      "district": "Rajshahi",
+      "upazila": "Boalia Thana",
+      "office_name": "Rajshahi Medical College TSO",
+      "post_code": "6000",
+      "source_index": {
+        "division": 3,
+        "district": 6,
+        "police_station": 13,
+        "post_office": 5
+      }
+    },
+    {
+      "id": "3-6-13-6",
+      "division": "Rajshahi",
+      "district": "Rajshahi",
+      "upazila": "Boalia Thana",
+      "office_name": "Hetemkha TSO",
+      "post_code": "6000",
+      "source_index": {
+        "division": 3,
+        "district": 6,
+        "police_station": 13,
+        "post_office": 6
+      }
+    },
+    {
+      "id": "3-6-13-7",
+      "division": "Rajshahi",
+      "district": "Rajshahi",
+      "upazila": "Boalia Thana",
+      "office_name": "Rajshahi College TSO",
+      "post_code": "6000",
+      "source_index": {
+        "division": 3,
+        "district": 6,
+        "police_station": 13,
+        "post_office": 7
+      }
+    },
+    {
+      "id": "3-6-14-0",
+      "division": "Rajshahi",
+      "district": "Rajshahi",
+      "upazila": "Shahmokdum Thana",
+      "office_name": "Sapura TSO",
+      "post_code": "6203",
+      "source_index": {
+        "division": 3,
+        "district": 6,
+        "police_station": 14,
+        "post_office": 0
+      }
+    },
+    {
+      "id": "3-6-14-1",
+      "division": "Rajshahi",
+      "district": "Rajshahi",
+      "upazila": "Shahmokdum Thana",
+      "office_name": "Postal Complex TSO",
+      "post_code": "6203",
+      "source_index": {
+        "division": 3,
+        "district": 6,
+        "police_station": 14,
+        "post_office": 1
+      }
+    },
+    {
+      "id": "3-6-15-0",
+      "division": "Rajshahi",
+      "district": "Rajshahi",
+      "upazila": "Chandrima Thana",
+      "office_name": "Padma R/A TSO",
+      "post_code": "6207",
+      "source_index": {
+        "division": 3,
+        "district": 6,
+        "police_station": 15,
+        "post_office": 0
+      }
+    }
+  ]
+}

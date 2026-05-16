@@ -9,6 +9,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { postcodes, getDivisions, getDistricts, getUpazilas, getPostcodes } from "@/data/postcodes";
 
 export const Route = createFileRoute("/_public/map")({
+  validateSearch: (search: Record<string, unknown>) => ({
+    postcodeId: typeof search.postcodeId === "string" ? search.postcodeId : "",
+  }),
   component: MapPage,
   head: () => ({ meta: [{ title: "Interactive Postcode Map — IPMS" }] }),
 });
@@ -16,11 +19,16 @@ export const Route = createFileRoute("/_public/map")({
 
 
 function MapPage() {
-  const [selected, setSelected] = useState<string>("Dhaka");
-  const [district, setDistrict] = useState<string>("");
-  const [upazila, setUpazila] = useState<string>("");
-  const [postcodeId, setPostcodeId] = useState<string>("");
-  const [layer, setLayer] = useState<"standard" | "satellite" | "boundary">("standard");
+  const search = Route.useSearch();
+  const linkedPostcode = useMemo(
+    () => postcodes.find((p) => p.id === search.postcodeId) ?? null,
+    [search.postcodeId]
+  );
+  const [selected, setSelected] = useState<string>(linkedPostcode?.division ?? "Dhaka");
+  const [district, setDistrict] = useState<string>(linkedPostcode?.district ?? "");
+  const [upazila, setUpazila] = useState<string>(linkedPostcode?.upazila ?? "");
+  const [postcodeId, setPostcodeId] = useState<string>(linkedPostcode?.id ?? "");
+  const [layer, setLayer] = useState<"standard" | "satellite">("standard");
   
 
   const inDivision = postcodes.filter((p) => p.division === selected);
@@ -44,7 +52,7 @@ function MapPage() {
     () => postcodes.find((p) => p.id === postcodeId) ?? null,
     [postcodeId]
   );
-  const marker = activePostcode
+  const marker = activePostcode && activePostcode.lat !== 0 && activePostcode.lng !== 0
     ? { lat: activePostcode.lat, lng: activePostcode.lng, label: `${activePostcode.postcode} · ${activePostcode.area}` }
     : null;
 
@@ -61,7 +69,6 @@ function MapPage() {
           <TabsList>
             <TabsTrigger value="standard"><Layers className="mr-1 h-3.5 w-3.5" /> Standard</TabsTrigger>
             <TabsTrigger value="satellite">Satellite</TabsTrigger>
-            <TabsTrigger value="boundary">Boundaries</TabsTrigger>
           </TabsList>
         </Tabs>
       </div>
@@ -150,7 +157,8 @@ function MapPage() {
                     size="sm"
                     variant={postcodeId === p.id ? "default" : "ghost"}
                     className="gap-1"
-                    onClick={() => setPostcodeId(p.id)}
+                    aria-pressed={postcodeId === p.id}
+                    onClick={() => setPostcodeId((current) => current === p.id ? "" : p.id)}
                   >
                     <MapPin className="h-3 w-3" /> Pin
                   </Button>

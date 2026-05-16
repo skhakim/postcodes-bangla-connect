@@ -1,10 +1,13 @@
 import rawHierarchy from "./bangladesh_post_codes_hierarchical.json";
+import rawPostOfficeLocations from "./post_office_locations.json";
 
 // ── Types for the hierarchical JSON ──────────────────────────────────────────
 type RawPostOffice = { office_name: string; post_code: string };
 type RawPoliceStation = { police_station: string; post_offices: RawPostOffice[] };
 type RawDistrict = { district: string; police_stations: RawPoliceStation[] };
 type RawDivision = { division: string; districts: RawDistrict[] };
+type RawPostOfficeLocation = { id: string; lat: number; lng: number };
+type RawPostOfficeLocations = { locations: RawPostOfficeLocation[] };
 
 // ── Postcode record type ──────────────────────────────────────────────────────
 export type Postcode = {
@@ -27,6 +30,12 @@ export type Postcode = {
 // Update the JSON file and both `postcodes` and `divisions` update automatically.
 
 const _raw = rawHierarchy as unknown as RawDivision[];
+const _locationById = new Map(
+  ((rawPostOfficeLocations as unknown as RawPostOfficeLocations).locations ?? []).map((location) => [
+    location.id,
+    location,
+  ])
+);
 
 /**
  * Flat list of all 9,800+ post office records derived from the hierarchical JSON.
@@ -38,20 +47,25 @@ export const postcodes: Postcode[] = _raw.flatMap((divObj, di) => {
 
   return divObj.districts.flatMap((distObj, disti) =>
     distObj.police_stations.flatMap((ps, psi) =>
-      ps.post_offices.map((po, poi) => ({
-        id: `${di}-${disti}-${psi}-${poi}`,
-        postcode: po.post_code,
-        area: po.office_name,
-        areaBn: "",                  // not present in source data
-        postOffice: po.office_name,
-        upazila: ps.police_station,
-        district: distObj.district,
-        division,
-        lat: 0,                      // not present in source data
-        lng: 0,                      // not present in source data
-        status: "active" as const,
-        updatedAt: "",
-      }))
+      ps.post_offices.map((po, poi) => {
+        const id = `${di}-${disti}-${psi}-${poi}`;
+        const location = _locationById.get(id);
+
+        return {
+          id,
+          postcode: po.post_code,
+          area: po.office_name,
+          areaBn: "",                  // not present in source data
+          postOffice: po.office_name,
+          upazila: ps.police_station,
+          district: distObj.district,
+          division,
+          lat: location?.lat ?? 0,
+          lng: location?.lng ?? 0,
+          status: "active" as const,
+          updatedAt: "",
+        };
+      })
     )
   );
 });

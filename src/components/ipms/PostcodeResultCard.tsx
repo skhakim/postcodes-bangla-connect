@@ -23,7 +23,7 @@ export function PostcodeResultCard({ p }: { p: Postcode }) {
               {p.postOffice} · {p.upazila}, {p.district}, {p.division}
             </div>
           </div>
-          <Link to="/map" className="shrink-0">
+          <Link to="/map" search={{ postcodeId: p.id }} className="shrink-0">
             <Button variant="outline" size="sm" className="gap-1">
               <MapPin className="h-3.5 w-3.5" /> Map
             </Button>

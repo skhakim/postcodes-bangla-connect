@@ -4,35 +4,106 @@ import { Navigation, MapPin, AlertTriangle, ShieldX, SignalLow, Loader2 } from "
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { postcodes } from "@/data/postcodes";
+import { postcodes, type Postcode } from "@/data/postcodes";
 import { PostcodeResultCard } from "@/components/ipms/PostcodeResultCard";
 import { useOnline } from "@/lib/online";
 
 export const Route = createFileRoute("/_public/gps")({
   component: GpsPage,
-  head: () => ({ meta: [{ title: "GPS Postcode Lookup — IPMS" }] }),
+  head: () => ({ meta: [{ title: "GPS Postcode Lookup - IPMS" }] }),
 });
 
 type State = "idle" | "loading" | "success" | "denied" | "weak" | "outside";
+type Coordinate = { lat: number; lng: number; acc: number };
+type LocationMatch = { postcode: Postcode; distance: number };
+
+const MAX_REASONABLE_ACCURACY_METERS = 5000;
+
+function distanceMeters(a: { lat: number; lng: number }, b: { lat: number; lng: number }) {
+  const earthRadiusMeters = 6371000;
+  const toRad = (degrees: number) => degrees * Math.PI / 180;
+  const dLat = toRad(b.lat - a.lat);
+  const dLng = toRad(b.lng - a.lng);
+  const lat1 = toRad(a.lat);
+  const lat2 = toRad(b.lat);
+  const haversine =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLng / 2) ** 2;
+
+  return 2 * earthRadiusMeters * Math.atan2(Math.sqrt(haversine), Math.sqrt(1 - haversine));
+}
+
+function findNearestPostcode(coord: Coordinate): LocationMatch | null {
+  return postcodes
+    .filter((p) => p.lat !== 0 && p.lng !== 0)
+    .map((postcode) => ({
+      postcode,
+      distance: distanceMeters(coord, { lat: postcode.lat, lng: postcode.lng }),
+    }))
+    .sort((a, b) => a.distance - b.distance)[0] ?? null;
+}
 
 function GpsPage() {
   const [state, setState] = useState<State>("idle");
-  const [coord, setCoord] = useState<{ lat: number; lng: number; acc: number } | null>(null);
+  const [coord, setCoord] = useState<Coordinate | null>(null);
+  const [match, setMatch] = useState<LocationMatch | null>(null);
   const { online } = useOnline();
 
-  const detect = (mode?: State) => {
-    setState("loading");
-    setTimeout(() => {
-      if (mode) {
-        setState(mode);
-        return;
-      }
-      setCoord({ lat: 23.7461, lng: 90.3742, acc: 18 });
-      setState("success");
-    }, 1200);
+  const reset = () => {
+    setCoord(null);
+    setMatch(null);
+    setState("idle");
   };
 
-  const result = postcodes[0];
+  const detect = () => {
+    if (!navigator.geolocation) {
+      setState("outside");
+      return;
+    }
+
+    setState("loading");
+    setCoord(null);
+    setMatch(null);
+
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const nextCoord = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude,
+          acc: position.coords.accuracy,
+        };
+
+        setCoord(nextCoord);
+
+        if (nextCoord.acc > MAX_REASONABLE_ACCURACY_METERS) {
+          setState("weak");
+          return;
+        }
+
+        const nearest = findNearestPostcode(nextCoord);
+        if (!nearest) {
+          setState("outside");
+          return;
+        }
+
+        setMatch(nearest);
+        setState("success");
+      },
+      (error) => {
+        if (error.code === error.PERMISSION_DENIED) {
+          setState("denied");
+          return;
+        }
+
+        setState("weak");
+      },
+      {
+        enableHighAccuracy: true,
+        timeout: 15000,
+        maximumAge: 0,
+      }
+    );
+  };
 
   return (
     <div className="container mx-auto max-w-4xl px-4 py-10">
@@ -49,50 +120,50 @@ function GpsPage() {
                 <Navigation className="h-9 w-9" />
               </div>
               <p className="mt-4 max-w-md text-sm text-muted-foreground">
-                We'll request location access and match it to the closest pilot postcode area. Your location is not stored.
+                We'll request location access and match it to the nearest postcode record with coordinates. Your location is not stored.
               </p>
-              <Button size="lg" className="mt-6 gap-2" onClick={() => detect()} disabled={!online}>
+              <Button size="lg" className="mt-6 gap-2" onClick={detect} disabled={!online}>
                 <Navigation className="h-5 w-5" /> Detect My Location
               </Button>
               {!online && (
                 <p className="mt-3 text-xs text-destructive">GPS lookup is unavailable while offline.</p>
               )}
-              <div className="mt-6 flex flex-wrap justify-center gap-2">
-                <Button variant="ghost" size="sm" onClick={() => detect("denied")}>Simulate denied</Button>
-                <Button variant="ghost" size="sm" onClick={() => detect("weak")}>Simulate weak signal</Button>
-                <Button variant="ghost" size="sm" onClick={() => detect("outside")}>Simulate outside pilot</Button>
-              </div>
             </div>
           )}
 
           {state === "loading" && (
             <div className="flex flex-col items-center py-10 text-center">
               <Loader2 className="h-10 w-10 animate-spin text-primary" />
-              <p className="mt-4 text-sm text-muted-foreground">Acquiring GPS signal…</p>
+              <p className="mt-4 text-sm text-muted-foreground">Acquiring GPS signal...</p>
             </div>
           )}
 
-          {state === "success" && coord && (
+          {state === "success" && coord && match && (
             <div className="space-y-5">
               <Alert className="border-success/50 bg-success/10">
                 <MapPin className="h-4 w-4" />
                 <AlertTitle>Location detected</AlertTitle>
                 <AlertDescription>
-                  Coordinates: {coord.lat.toFixed(4)}, {coord.lng.toFixed(4)} · Accuracy ±{coord.acc}m
+                  Coordinates: {coord.lat.toFixed(4)}, {coord.lng.toFixed(4)}. Accuracy +/-{Math.round(coord.acc)}m.
                 </AlertDescription>
               </Alert>
-              <PostcodeResultCard p={result} />
+              <p className="text-sm text-muted-foreground">
+                Nearest post office is approximately {Math.round(match.distance).toLocaleString()}m from your detected location.
+              </p>
+              <PostcodeResultCard p={match.postcode} />
               <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
-                <Field k="Division" v={result.division} />
-                <Field k="District" v={result.district} />
-                <Field k="Upazila" v={result.upazila} />
-                <Field k="Area" v={result.area} />
-                <Field k="Post Office" v={result.postOffice} />
-                <Field k="Postcode" v={result.postcode} />
+                <Field k="Division" v={match.postcode.division} />
+                <Field k="District" v={match.postcode.district} />
+                <Field k="Upazila" v={match.postcode.upazila} />
+                <Field k="Area" v={match.postcode.area} />
+                <Field k="Post Office" v={match.postcode.postOffice} />
+                <Field k="Postcode" v={match.postcode.postcode} />
               </div>
               <div className="flex gap-2">
-                <Button onClick={() => setState("idle")}>Try again</Button>
-                <Link to="/map"><Button variant="outline">View on Map</Button></Link>
+                <Button onClick={reset}>Try again</Button>
+                <Link to="/map" search={{ postcodeId: match.postcode.id }}>
+                  <Button variant="outline">View on Map</Button>
+                </Link>
               </div>
             </div>
           )}
@@ -102,7 +173,7 @@ function GpsPage() {
               icon={ShieldX}
               title="Location access denied"
               desc="You blocked location permission. You can still find your postcode using manual search."
-              onRetry={() => setState("idle")}
+              onRetry={reset}
             />
           )}
 
@@ -110,17 +181,17 @@ function GpsPage() {
             <ErrorState
               icon={SignalLow}
               title="Weak GPS signal"
-              desc="We couldn't get a precise fix. Try moving outdoors, or switch to manual search."
-              onRetry={() => setState("idle")}
+              desc="We couldn't get a precise location fix. Try moving outdoors, or switch to manual search."
+              onRetry={reset}
             />
           )}
 
           {state === "outside" && (
             <ErrorState
               icon={AlertTriangle}
-              title="Outside pilot district"
-              desc="Your location is outside the current IPMS pilot coverage. Manual search is available nationwide."
-              onRetry={() => setState("idle")}
+              title="GPS lookup unavailable"
+              desc="This browser or location could not be matched to a postcode record. Manual search is available nationwide."
+              onRetry={reset}
             />
           )}
         </CardContent>
@@ -138,7 +209,17 @@ function Field({ k, v }: { k: string; v: string }) {
   );
 }
 
-function ErrorState({ icon: Icon, title, desc, onRetry }: { icon: typeof Navigation; title: string; desc: string; onRetry: () => void }) {
+function ErrorState({
+  icon: Icon,
+  title,
+  desc,
+  onRetry,
+}: {
+  icon: typeof Navigation;
+  title: string;
+  desc: string;
+  onRetry: () => void;
+}) {
   return (
     <div className="flex flex-col items-center text-center">
       <div className="flex h-16 w-16 items-center justify-center rounded-full bg-destructive/10 text-destructive">
