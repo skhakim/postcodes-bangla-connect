@@ -22,9 +22,6 @@ function MapPage() {
   const [postcodeId, setPostcodeId] = useState<string>("");
   const [layer, setLayer] = useState<"standard" | "satellite" | "boundary">("standard");
   
-  const handleUpazilaMapError = (message: string) => {
-    alert(`❌ Map not found\n\n${message}`);
-  };
 
   const inDivision = postcodes.filter((p) => p.division === selected);
   const districts = useMemo(
@@ -120,7 +117,6 @@ function MapPage() {
                 highlightUpazila={upazila}
                 marker={marker}
                 onSelect={(div, dist) => { setSelected(div); setDistrict(dist ?? ""); setPostcodeId(""); }}
-                onUpazilaMapError={handleUpazilaMapError}
                 className="aspect-square w-full"
               />
             </div>

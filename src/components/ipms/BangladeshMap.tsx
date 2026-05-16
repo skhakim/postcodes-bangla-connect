@@ -10,7 +10,6 @@ export type BangladeshMapProps = {
   marker?: { lat: number; lng: number; label?: string } | null;
   layer?: "standard" | "satellite" | "boundary";
   className?: string;
-  onUpazilaMapError?: (message: string) => void;
 };
 
 function Placeholder({ className }: { className?: string }) {
