@@ -2,8 +2,8 @@
   "generated_by": "generate_post_office_locations.py",
   "source_postcodes": "src\\data\\bangladesh_post_codes_hierarchical.json",
   "source_upazilas": "src\\data\\upazilas.geojson.json",
-  "count": 9576,
-  "unmatched_count": 228,
+  "count": 9577,
+  "unmatched_count": 227,
   "locations": [
     {
       "id": "0-0-40-0",
@@ -162796,6 +162796,23 @@
       "lat": 25.997712,
       "lng": 88.195062,
       "location_method": "random"
+    },
+    {
+      "id": "0-0-22-3",
+      "division": "Dhaka",
+      "district": "Dhaka",
+      "upazila": "Sher-E-Banglanagar Thana",
+      "office_name": "Sher-E-Banglanagar TSO",
+      "post_code": "1207",
+      "source_index": {
+        "division": 0,
+        "district": 0,
+        "police_station": 22,
+        "post_office": 3
+      },
+      "lat": 23.772914,
+      "lng": 90.3805005,
+      "location_method": "manual_google_maps"
     }
   ]
 }

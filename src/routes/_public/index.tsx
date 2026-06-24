@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Navigation, Search, Map, WifiOff, Code2, ShieldCheck, ArrowRight } from "lucide-react";
+import { Navigation, Search, Map, WifiOff, Code2, ShieldCheck } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -95,25 +95,6 @@ function Home() {
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA strip */}
-      <section className="container mx-auto px-4 py-14">
-        <div className="rounded-2xl border bg-primary p-8 text-primary-foreground sm:p-12">
-          <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
-            <div>
-              <h3 className="text-2xl font-bold">Building a logistics or e-commerce product?</h3>
-              <p className="mt-2 max-w-xl text-primary-foreground/80">
-                Use the official IPMS API for postcode lookup, reverse geocoding, and batch validation.
-              </p>
-            </div>
-            <Link to="/login">
-              <Button size="lg" variant="secondary" className="gap-2">
-                API Documentation <ArrowRight className="h-4 w-4" />
-              </Button>
-            </Link>
           </div>
         </div>
       </section>

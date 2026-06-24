@@ -1,5 +1,5 @@
 {
-  "count": 228,
+  "count": 227,
   "items": [
     {
       "id": "0-0-0-0",
@@ -951,20 +951,6 @@
         "district": 0,
         "police_station": 22,
         "post_office": 2
-      }
-    },
-    {
-      "id": "0-0-22-3",
-      "division": "Dhaka",
-      "district": "Dhaka",
-      "upazila": "Sher-E-Banglanagar Thana",
-      "office_name": "Sher-E-Banglanagar TSO",
-      "post_code": "1207",
-      "source_index": {
-        "division": 0,
-        "district": 0,
-        "police_station": 22,
-        "post_office": 3
       }
     },
     {
