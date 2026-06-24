@@ -13,6 +13,7 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import districtsData from "../../data/districts.geojson.json";
 import upazilasData from "../../data/upazilas.geojson.json";
+import postOfficeBoundariesData from "../../data/post_office_boundaries.geojson.json";
 
 const DIVISION_COLORS: Record<string, string> = {
   Dhaka: "var(--chart-1)",
@@ -54,8 +55,9 @@ type Props = {
   highlight?: string;
   highlightDistrict?: string;
   highlightUpazila?: string;
+  selectedPostOfficeId?: string;
   marker?: { lat: number; lng: number; label?: string } | null;
-  layer?: "standard" | "satellite" | "boundary";
+  layer?: "standard" | "satellite";
   className?: string;
 };
 
@@ -123,6 +125,7 @@ export default function BangladeshMapInner({
   highlight,
   highlightDistrict,
   highlightUpazila,
+  selectedPostOfficeId,
   marker,
   layer = "standard",
   className,
@@ -161,7 +164,24 @@ export default function BangladeshMapInner({
       : null;
   }, [highlightUpazila, highlightDistrict, highlight]);
 
+  const selectedPostOfficeGeoJSON = useMemo<FeatureCollection | null>(() => {
+    if (!selectedPostOfficeId) return null;
+
+    const matches = (postOfficeBoundariesData as FeatureCollection).features.filter(
+      (f) => f.properties?.id === selectedPostOfficeId
+    );
+
+    return matches.length > 0
+      ? { type: "FeatureCollection", features: matches }
+      : null;
+  }, [selectedPostOfficeId]);
+
   const focusBounds = useMemo<L.LatLngBounds | null>(() => {
+    if (selectedPostOfficeGeoJSON) {
+      const geoJsonLayer = L.geoJSON(selectedPostOfficeGeoJSON);
+      return geoJsonLayer.getBounds();
+    }
+
     if (highlightUpazila && selectedUpazilaGeoJSON) {
       const geoJsonLayer = L.geoJSON(selectedUpazilaGeoJSON);
       return geoJsonLayer.getBounds();
@@ -198,6 +218,7 @@ export default function BangladeshMapInner({
     highlightDistrict,
     highlightUpazila,
     selectedUpazilaGeoJSON,
+    selectedPostOfficeGeoJSON,
     marker,
   ]);
 
@@ -269,6 +290,18 @@ export default function BangladeshMapInner({
         dashArray: "8, 8",
       };
     },
+    [layer],
+  );
+
+  const stylePostOfficeArea = useCallback(
+    () => ({
+      color: layer === "satellite" ? "#fef3c7" : resolveColor("var(--primary)"),
+      weight: 2.5,
+      opacity: 0.95,
+      fillColor: layer === "satellite" ? "#fde68a" : resolveColor("var(--primary)"),
+      fillOpacity: layer === "satellite" ? 0.28 : 0.18,
+      dashArray: "4, 6",
+    }),
     [layer],
   );
 
@@ -355,6 +388,27 @@ export default function BangladeshMapInner({
                 });
               }}
               pane="upazila-pane"
+            />
+          )}
+        </Pane>
+
+        <Pane name="post-office-area-pane" style={{ zIndex: 650 }}>
+          {selectedPostOfficeGeoJSON && (
+            <GeoJSON
+              key={`post-office-area-${selectedPostOfficeId ?? ""}-${layer}`}
+              data={selectedPostOfficeGeoJSON}
+              style={stylePostOfficeArea as any}
+              onEachFeature={(feature, lyr) => {
+                const officeName = feature.properties?.office_name || "";
+                const postcode = feature.properties?.post_code || "";
+                const upazilaName = feature.properties?.upazila || "";
+
+                lyr.bindTooltip(
+                  `<strong>${officeName}</strong><br/>${postcode} · ${upazilaName}`,
+                  { sticky: true }
+                );
+              }}
+              pane="post-office-area-pane"
             />
           )}
         </Pane>

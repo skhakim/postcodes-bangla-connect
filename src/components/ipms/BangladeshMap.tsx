@@ -7,8 +7,9 @@ export type BangladeshMapProps = {
   highlight?: string;
   highlightDistrict?: string;
   highlightUpazila?: string;
+  selectedPostOfficeId?: string;
   marker?: { lat: number; lng: number; label?: string } | null;
-  layer?: "standard" | "satellite" | "boundary";
+  layer?: "standard" | "satellite";
   className?: string;
 };
 

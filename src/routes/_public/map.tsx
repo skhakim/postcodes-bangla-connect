@@ -122,6 +122,7 @@ function MapPage() {
                 highlight={selected}
                 highlightDistrict={district}
                 highlightUpazila={upazila}
+                selectedPostOfficeId={marker ? postcodeId : undefined}
                 marker={marker}
                 onSelect={(div, dist) => { setSelected(div); setDistrict(dist ?? ""); setPostcodeId(""); }}
                 className="aspect-square w-full"
